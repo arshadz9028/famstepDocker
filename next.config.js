@@ -83,9 +83,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  devIndicators: {
-    buildActivity: true,
-  },
   output: "standalone",
 
    // Add Webpack configuration for video files
