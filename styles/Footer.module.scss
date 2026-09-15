@@ -1,0 +1,73 @@
+@import "./sass/_mixin.scss";
+@import "./sass/_variable.scss";
+
+.footer_section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin-top: auto;
+  padding-bottom: 2rem;
+
+  .footer {
+    color: $gray-content;
+    justify-content: center;
+    width: 55%;
+    text-align: center;
+
+    & .a {
+      font-size: 1.3rem;
+      padding: 0rem 0.8rem;
+      line-height: 3rem;
+      &:hover {
+        color: $brand-clr;
+      }
+    }
+
+    & .footer_logo {
+      font-size: 1.3rem;
+      padding: 0.8rem 0.8rem 0rem 0.8rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      line-height: 0;
+    }
+  }
+}
+.language {
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 3rem;
+  cursor: pointer;
+
+  color: $gray-content;
+  & .lang_down {
+    margin-left: -0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke-width: 0.2rem;
+    fill: none;
+    stroke: $gray-content;
+  }
+  &:hover > .lang_down {
+    stroke: $brand-clr;
+  }
+  &:hover {
+    color: $brand-clr;
+  }
+}
+@media (max-width: 750px) {
+  .footer_section {
+    .footer {
+      width: 80%;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .footer_section {
+    visibility: hidden;
+  }
+}

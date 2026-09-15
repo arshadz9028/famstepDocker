@@ -1,0 +1,251 @@
+@import "./sass/_variable.scss";
+
+.about_layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  width: 95.1vw;
+  height: auto;
+  background-color: white;
+  border-radius: 1.6rem;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  border: 1px solid $textSoft2;
+
+  & h3 {
+    font-size: 2.4rem;
+    font-weight: 400;
+  }
+}
+
+//NoPostCover css
+.aboutPost {
+  width: 95.1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: $background;
+  border-radius: 1.6rem;
+  padding: 4rem;
+  border: 1px solid $textSoft2;
+
+
+}
+.NoPostCircle {
+  width: 22rem;
+  height: 22rem;
+  border-radius: 25rem;
+  border: 0.5rem solid $background1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.NoPostIcons {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 15rem;
+}
+.ReactIcons {
+  width: 100%;
+  height: 100%;
+  color: $background1;
+}
+.NoPostMessage {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  color: $textSoft2;
+  font-weight: 500;
+}
+//NoPostCover css end
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about_content {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-top: 1px solid $background;
+  flex-wrap: nowrap; // Prevent wrapping
+
+  //image responsiveness (anabiya)
+  .logoProject {
+    position: relative;
+    width: 40px; // Adjust size as necessary
+    height: 40px; // Adjust size as necessary
+    flex-shrink: 0; // Prevent the image from shrinking
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.about_contentSocial {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+  .logo1 {
+    position: relative;
+    width: 35px; // Adjust size as necessary
+    height: 35px; // Adjust size as necessary
+    flex-shrink: 0; // Prevent the image from shrinking
+    margin: 3rem 1rem 1rem 2rem;
+    cursor: pointer;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.content_textCover {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; // Prevent wrapping
+  overflow: visible; // Ensure content is visible
+}
+.content_text {
+  cursor: pointer;
+  flex: 1; // Allow content to take the remaining space
+  min-width: 0; // Allow content to shrink properly
+
+  & h4 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+
+  & .content_details {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: gray;
+    margin-bottom: 1rem;
+  }
+
+  & .sharp {
+    color: $subtitle;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+
+  & .visible {
+    width: auto;
+    font-size: 1.8rem;
+    font-weight: 300;
+    // white-space: pre-line;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    transition: all ease-in-out 0.5s;
+    opacity: 1;
+  }
+
+  & .hidden {
+    display: none;
+    opacity: 0;
+    transition: all ease-in-out 0.5s;
+  }
+}
+
+.seeMore {
+  color: $brand-clr;
+  font-size: 1.6rem;
+}
+.edit {
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+}
+.editOn {
+  height: 2rem;
+  width: 2rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  color: $subtitle;
+  position: relative;
+}
+@media (min-width: 1367px) {
+  .aboutPost, .about {
+    width: 130rem
+  }
+}
+@media (max-width: 970px) {
+  .about {
+    width: 98vw;
+    padding: 1rem;
+
+    & h3 {
+      font-size: 2rem;
+    }
+  }
+  .aboutPost {
+    width: 98vw;
+  }
+  .content_text {
+    & h4 {
+      font-size: 1.6rem;
+    }
+
+    & h2 {
+      font-size: 1.5rem;
+    }
+
+    & button {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .about {
+    width: 80vw;
+    margin-bottom: 0.5rem;
+  }
+  .aboutPost {
+    width: 80vw;
+  }
+}
+@media (max-width: 591px) {
+  .about {
+    width: 98vw;
+    border-radius: 0rem;
+  }
+  .aboutPost {
+    width: 98vw;
+    padding: 3rem 2rem;
+  }
+  .NoPostCircle {
+    width: 15rem;
+    height: 15rem;
+
+  }
+  .NoPostIcons {
+    width: 10rem;
+    height: 10rem;
+  }
+  .NoPostMessage{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 900;
+  }
+  .about_content {
+    .logoProject {
+      width: 30px; // Adjust size as necessary
+      height: 30px; // Adjust size as necessary
+    }
+  }
+}

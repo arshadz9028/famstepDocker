@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  pulsar:
+    container_name: penguin
+    image: 518990/pulsar
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      NEXTAUTH_URL: https://famstep.com
+      BASE_URL: https://famstep.com  

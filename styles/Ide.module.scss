@@ -1,0 +1,1190 @@
+@import "./sass/_variable.scss";
+
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700);
+// @import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
+
+//ide navbar
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  width: 100%;
+  background: $white;
+  list-style-type: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+//  {/* navbar center */}
+.navbar_section {
+  width: 97%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_Control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// {/* logo control */}
+.logo_image {
+  margin-right: 3rem;
+
+  & svg {
+    width: 14rem;
+    height: 100%;
+  }
+}
+
+.logo_image1 {
+  display: none;
+}
+
+.programming_border,
+.programming_border_mob {
+  width: 20rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
+  transition: all ease 0.3s;
+  border: 1px solid $border;
+  border-radius: 2rem;
+  background: $background;
+  padding: 0.8rem 0rem;
+
+  & .inputBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & input {
+      width: 19rem;
+      height: 100%;
+      border: none;
+      font-size: 1.7rem;
+      font-weight: 520;
+      outline: none;
+      background: $background;
+      text-align: left;
+      padding: 0rem 2rem;
+      line-height: 40px; /* Ensures the text is vertically centered */
+    }
+  }
+  & .options {
+    width: 20rem;
+    height: 21rem;
+    position: absolute;
+    top: 4.2rem;
+    left: 0;
+    background: $white;
+    overflow-y: auto;
+    z-index: 9;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    transition: all ease 0.3s;
+
+    // Custom scrollbar styles
+    &::-webkit-scrollbar {
+      width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $gray_highlight; // Adjust this color as needed
+      border-radius: 0rem 0.5rem 0.5rem 0rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $white; // Adjust this color as needed
+      border-radius: 0rem 0.5rem 0.5rem 0rem;
+      border: 2px solid $gray_highlight; // Adjust this color as needed
+    }
+
+    & .dropdown_item {
+      padding: 1rem 2rem;
+      font-size: 1.4rem;
+      transition: all 0.2s;
+
+      &:nth-child(odd) {
+        background: $brandclr-highlight;
+      }
+
+      &:hover {
+        background-color: $brand-clr;
+        color: $white;
+      }
+    }
+  }
+}
+
+.handle_screen, .handle_screen2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30rem;
+}
+.handle_screen2{
+  width: 22rem;
+
+}
+.timeCal {
+  display: flex;
+  font-size: 1.8rem;
+  & > p {
+    color: $brand_clr;
+    font-weight: 500;
+    & > span {
+      margin-left: 0.5rem;
+      font-weight: 550;
+      color: $black;
+    }
+  }
+}
+
+.cover_ideCloseBtnMin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 9rem;
+}
+
+.exitBtn {
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  color: $gray_content;
+
+  &:hover {
+    color: red;
+  }
+}
+
+.minimize {
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  color: $gray_content;
+
+  &:hover {
+    color: $brand_clr;
+  }
+}
+
+.handle_screen {
+  transition: transform 0.3s ease;
+  /* Add a smooth transition effect to the transform property */
+}
+
+// minimize the ide
+// .minimized {
+//   transform: translateX(calc(100vw - 95vw)) translateY(calc(100vh - 10vw))
+//     scale(0);
+//   transition: transform 0.3s ease-in, width 0.3s ease-in, height 0.3s ease-in;
+//   width: 0px;
+//   height: 0px;
+// }
+
+// .maximized {
+//   transform: translateX(0vw) translateY(0vh) scale(1);
+//   transition: transform 0.3s ease-out, width 0.3s ease-out, height 0.3s ease-out;
+//   width: 100vw;
+//   height: 100vh;
+// }
+
+// .Submit_dialoge {
+//   width: 100vw;
+//   height: 100vh;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   display: grid;
+//   place-items: center;
+//   background: rgb(62, 60, 60, 0.8);
+//   z-index: 999;
+//   overflow: hidden;
+
+//   & .messageAction {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-evenly;
+//     flex-direction: column;
+//     height: 18rem;
+//     width: 30rem;
+//     color: $white;
+//     border-radius: 1rem;
+//     background: #545454;
+//     font-size: 1.6rem;
+
+//     & .msg {
+//       & pre {
+//         text-align: center;
+//         line-height: 2.5rem;
+//       }
+//     }
+
+//     & .icons_name {
+//       // margin-top: 2.5rem;
+//       display: grid;
+//       place-items: center;
+//       cursor: pointer;
+//       height: 4rem;
+//       width: 15rem;
+//       transition: all 0.3s ease-in-out;
+//       color: $black;
+//       border-radius: 2rem;
+//       font-weight: 500;
+//       background-color: $brandclr-highlight;
+//     }
+//   }
+// }
+
+
+//setting
+.settingAction {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  bottom: 3.2rem;
+  left: -0.8rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  z-index: 9999999;
+  transition: all 1s;
+  background-color: transparent;
+
+  & .messageAction {
+    //   padding: .5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 13rem;
+    width: 20rem;
+    background-color: #3c3c3c;
+    color: $white;
+    border-radius: 0.5rem;
+    margin: 0rem 0rem 0.1rem 5rem;
+
+    & .icons_name {
+      // margin-bottom: 1.1rem;
+
+      // padding: .8rem 1rem;
+      height: 3rem;
+      width: 3rem;
+      transition: all 0.3s ease-in-out;
+
+      color: $white;
+    }
+  }
+}
+
+// ShowLiveModal
+.liveAction {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: -0.7rem;
+  bottom: 3.2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  z-index: 9999999;
+  transition: all 1s;
+  background-color: transparent;
+
+  & .messAction {
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    display: flex;
+    max-height: 75vh;
+    min-height: 20rem;
+    width: 27.9rem;
+    background-color: #3c3c3c;
+    color: $white;
+    border-radius: 0.5rem;
+    margin: 0rem 0rem 0.1rem 5rem;
+    overflow-y: auto;
+    // Custom scrollbar styles
+    &::-webkit-scrollbar {
+      width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $gray_highlight; // Adjust this color as needed
+      border-radius: 0rem 0.5rem 0.5rem 0rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #3c3c3c; // Adjust this color as needed
+      border-radius: 0rem 0.5rem 0.5rem 0rem;
+      border: 2px solid $gray_highlight; // Adjust this color as needed
+    }
+    & .dcxs {
+      display: flex;
+      align-items: center;
+
+      margin-top: 1.5rem;
+    }
+    & .search_dp {
+      position: relative;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 5rem;
+      overflow: hidden;
+      margin-right: 0.6rem;
+    }
+    & .text_btn {
+      height: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+
+      & .search_name {
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $white;
+      }
+
+      & .search_id {
+        display: flex;
+        font-size: 1.3rem;
+        color: $gray_content;
+      }
+    }
+
+    & .icons_name {
+      // margin-bottom: 1.1rem;
+
+      // padding: .8rem 1rem;
+      height: 3rem;
+      width: 3rem;
+      transition: all 0.3s ease-in-out;
+
+      color: $white;
+    }
+  }
+}
+
+.lightThem {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  width: 60%;
+  cursor: pointer;
+
+  & p {
+    font-size: 1.5rem;
+  }
+}
+
+.darkThem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 60%;
+
+  & p {
+    font-size: 1.5rem;
+  }
+}
+
+// below the navbar part
+.main {
+  width: 100%;
+  height: calc(100vh - 6rem);
+  display: flex;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+//side bar of ide
+.control_bar {
+  width: 4rem;
+  height: 100%;
+  background-color: #3c3c3c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
+  border-right: 1px solid $subtitle;
+
+  & .file_submit {
+    height: 17rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3rem;
+    padding-top: 1rem;
+    & .files_contain {
+      color: $gray-content;
+      height: 3rem;
+      width: 3rem;
+      cursor: pointer;
+      transition: all ease-in-out 0.1s;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  & .calls_settings {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    & .headset {
+      height: 3rem;
+      width: 3rem;
+      cursor: pointer;
+      color: $gray_content;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+.Sub_code {
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  color: $gray-content;
+  position: relative;
+}
+.Sub_codeSVG{
+  width: 100%;
+  height: 100%;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: #3d3c3c;
+  border: 1px solid $subtitle;
+  color: $white;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 0; /* Position the tooltip above the text */
+  left: 3rem;
+  opacity: 0;
+  transition: all ease 0.3s; /* Speed of appearance */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.list_view {
+  font-size: 1.4rem;
+  text-align: center;
+  width: 26rem;
+  height: 100%;
+  overflow: auto;
+  background-color: $subtitle;
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
+
+  & .folder {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    color: $gray_highlight;
+    margin-top: 1rem;
+
+    & .arrow {
+      // padding: 2rem;
+      & .down_arrow {
+        height: 2.5rem;
+        width: 2.5rem;
+      }
+    }
+
+    & .folder_name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $gray_highlight;
+
+      & .cover_folderHandle {
+        position: relative;
+        height: 2.5rem;
+        width: 2.5rem;
+        overflow: hidden;
+      }
+
+      & p {
+        margin-left: 0.5rem;
+        letter-spacing: 0.1rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  & .files {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+
+    & .verticleLine {
+      margin-left: 2rem;
+      display: flex;
+      width: 0.1rem;
+      height: 6.5rem;
+
+      background-color: $gray_content;
+    }
+
+    & .file_handle {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.6rem;
+
+      & .prob_file {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $gray_highlight;
+        font-size: 1.7rem;
+
+        & .pp {
+          height: 2.3rem;
+          width: 2.3rem;
+        }
+
+        & p {
+          margin-left: 1rem;
+        }
+      }
+
+      & .sol_file {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        color: $gray_highlight;
+        font-size: 1.7rem;
+
+        & .sf {
+          height: 2.3rem;
+          width: 2.3rem;
+        }
+
+        & p {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+//ide
+.code_area {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.fileListWidth {
+  width: calc(100% - 4rem);
+}
+
+.fileListWidth1 {
+  width: calc(100% - 30rem);
+}
+
+//nav
+.code_nav {
+  width: 100%;
+  height: 4rem;
+  background-color: $gray_content;
+  display: flex;
+  text-align: center;
+  font-size: 1.4rem;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid $gray_content;
+
+  & .prob_tab {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    & button {
+      background-color: $white;
+      color: $black;
+      font-size: 1.8rem;
+      width: 9rem;
+      height: 3.9rem;
+      margin: auto;
+      line-height: 1.25rem;
+      //solve the horizontal centering
+      padding: 0px;
+      cursor: pointer;
+    }
+  }
+}
+.code_MobNav {
+  width: 100%;
+  height: 4rem;
+  background-color: $gray_content;
+  display: none;
+  font-size: 1.4rem;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid $background;
+  & .files_contain {
+    color: $black;
+    height: 3.2rem;
+    width: 3.2rem;
+    cursor: pointer;
+    transition: all ease-in-out 0.1s;
+    margin-right: 0.9rem;
+  }
+}
+.RunButtun {
+  color: $codeBackground;
+  height: 3.2rem;
+  width: 3.2rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: none;
+}
+.prog_tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  margin-right: 1.5rem;
+}
+
+.split {
+  margin-right: 2.5rem;
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  color: $background;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.textSubmit,
+.textSubmitMob {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+
+  & span {
+    font-weight: 500;
+  }
+
+  & p {
+    color: $prime_highlight;
+    font-weight: 550;
+  }
+}
+.EntriesCircle {
+  width: auto;
+  height: auto;
+  background-color: $gray_highlight;
+  border-radius: 50%;
+  padding: 0.2rem 0.9rem;
+  display: grid;
+  place-items: center;
+  margin-left: 1rem;
+}
+.textSubmitMob {
+  display: none;
+}
+
+//main ide
+.ide_cover {
+}
+
+.problem {
+  background-color: #1e1e1e;
+  color: $gray_highlight;
+  overflow: auto;
+  height: 100%;
+  text-align: left;
+  width: 100%;
+
+  & p {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+  }
+
+  // background-color: $black;
+}
+
+/* this problem code is for light mode */
+.problem_dark {
+  background-color: $white;
+  color: $black;
+  font-size: 20rem;
+  border-right: 0.2rem solid $gray_content;
+  overflow: hidden;
+  // height: 75rem;
+  width: 100%;
+  display: flex;
+
+  & p {
+    width: 100%;
+  }
+
+  // background-color: $black;
+}
+.question{
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  white-space: pre-line;
+}
+.codes {
+  width: 100%;
+  display: flex;
+  // border: 2px solid red;
+}
+
+.codesSplit {
+  width: 50%;
+  display: flex;
+}
+
+.down_nav,
+.down_nav_terminal {
+  width: 100%;
+  height: 3rem;
+  background-color: $gray_content;
+  display: flex;
+  font-size: 1.4rem;
+  align-items: center;
+  justify-content: center;
+  padding-right: 1rem;
+
+  .runCode {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 0.2rem;
+    width: 100%;
+    height: 3rem;
+    gap: 2rem;
+
+    & .compileCode {
+      width: 2.8rem;
+      height: 2.8rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    & button {
+      background-color: $brand_clr;
+      font-size: 1.4rem;
+      height: 2.5rem;
+      width: 9rem;
+      color: $white;
+      // margin: auto;
+      line-height: 1.25rem;
+      //solve the horizontal centering
+      padding: 0px;
+      cursor: pointer;
+    }
+  }
+}
+.down_nav_terminal {
+  display: none;
+}
+.terminal_control {
+  display: flex;
+}
+.ip_area,
+.ip_area_light {
+  width: 30%;
+  background-color: #1e1e1e;
+  border: none;
+  border-left: 2px solid $gray_content;
+  outline: none;
+  font-family: "Zilla Slab", serif;
+  font-size: 1.8rem;
+  color: $gray_highlight;
+  padding: 0.8rem;
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray_highlight; // Adjust this color as needed
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-content; // Adjust this color as needed
+    border-radius: 0rem 1rem 1rem 0rem;
+    border: 2px solid $white; // Adjust this color as needed
+  }
+}
+.ip_area_light {
+  background-color: $white;
+  color: black;
+}
+.output,
+.output_light {
+  font-family: "Courier New", monospace;
+  font-size: 1.6rem;
+  width: 100%;
+  height: 25rem;
+  padding: 0.8rem;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: $gray_highlight;
+  background-color: #1e1e1e;
+  
+  & p {
+    padding-bottom: 1rem;
+  }
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray_highlight; // Adjust this color as needed
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-content; // Adjust this color as needed
+    border-radius: 0rem 1rem 1rem 0rem;
+    border: 2px solid $white; // Adjust this color as needed
+  }
+}
+
+.output_light {
+  background-color: $white;
+  color: $black;
+}
+.outputCode{
+  white-space: pre-wrap;
+  line-height: 1.0;
+  font-family: monospace;
+  display: block;
+  width: 100%;
+  margin:0;
+  margin-top: 1rem;
+}
+.signInButt {
+  // width: 100%;
+  display: grid;
+  place-items: center;
+  & input {
+    display: grid;
+    place-items: center;
+    width: 10rem;
+    height: 4rem;
+    background-color: $brand-clr;
+    border-radius: 4rem;
+    color: $white;
+    cursor: pointer;
+    font-size: 1.8rem;
+    line-height: 0rem;
+    transition: all .3s ease;
+
+
+    &:hover {
+      background-color: #063a6e;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+.signUpButt {
+  display: grid;
+  place-items: center;
+  & input {
+    display: grid;
+    place-items: center;
+    width: 10rem;
+    height: 4rem;
+    background-color: $white;
+    color: $brand_clr;
+    cursor: pointer;
+    font-size: 1.8rem;
+    line-height: 0rem;
+    font-weight: 600;
+    transition: all .3s ease;
+
+    &:hover {
+      background: transparent;
+      color: #063a6e;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+//media queries
+
+@media (max-width: 970px) {
+  .programming_border {
+    & .programing {
+      font-size: 1.4rem;
+      margin-left: 0rem;
+    }
+
+    & .options {
+      & .dropdown_item {
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .fileListWidth1 {
+    width: calc(100% - 4rem);
+  }
+
+  .list_view {
+    height: 88.5%;
+    position: absolute;
+    left: 4.2rem;
+    bottom: 0rem;
+    z-index: 999;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    height: 4.5rem;
+  }
+  .navbar_section {
+    width: 96%;
+  }
+  .logo_image {
+    display: none;
+  }
+
+  .programming_border {
+    display: none;
+  }
+
+  .programming_border_mob {
+    width: 17rem;
+    padding: 0.5rem 0rem;
+
+    & .inputBox {
+      & input {
+        width: 16rem;
+        font-size: 1.6rem;
+        font-weight: 520;
+      }
+    }
+
+    & .options {
+      height: 26rem;
+      top: 3.5rem;
+
+      & .dropdown_item {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+    }
+  }
+  .logo_image1 {
+    display: block;
+    margin-right: 2rem;
+
+    & svg {
+      width: 3.5rem;
+      height: 100%;
+    }
+  }
+  .handle_screen {
+    width: auto;
+    justify-content: flex-end;
+    gap: 3rem;
+  }
+  .timeCal {
+    font-size: 1.6rem;
+
+    & > p {
+      & > span {
+        display: block;
+      }
+    }
+  }
+
+  .tooltiptext {
+    display: none;
+  }
+  .main {
+    height: calc(100dvh - 4.5rem);
+  }
+
+  .code_MobNav {
+    display: flex;
+    // border-bottom: 1px solid $background;
+  }
+  .list_view {
+    height: calc(100vh);
+    position: absolute;
+    left: 4rem;
+    top: 4.5rem;
+    z-index: 999;
+  }
+  .down_nav_terminal {
+    display: flex;
+    height: 3.8rem;
+    .runCode {
+      & .compileCode {
+        width: 3.5rem;
+        height: 3.5rem;
+        cursor: pointer;
+      }
+
+      & button {
+        height: 3.2rem;
+      }
+    }
+  }
+  .down_nav {
+    display: none;
+  }
+
+  .settingAction {
+    bottom: 0.5rem;
+  }
+
+  .output,
+  .output_light {
+    height: 30.2rem;
+    padding: 0.8rem 1.5rem;
+  }
+  .RunButtun {
+    margin-right: 0.8rem;
+    display: block;
+  }
+  .prog_tab {
+    margin-right: 0.5rem;
+  }
+  .textSubmit {
+    display: none;
+  }
+  .textSubmitMob {
+    display: flex;
+  }
+  .ip_area,
+  .ip_area_light {
+    width: 80%;
+  }
+  .split {
+    display: none;
+  }
+}
+
+@media (max-width: 591px) {
+  .RunButtun {
+    margin-right: 0.4rem;
+  }
+}
+@media (max-width: 425px) {
+  .signInButt, .signUpButt {
+    & input {
+      width: 6rem;
+      height: 3rem;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media (max-width: 383px) {
+  .programming_border_mob {
+    width: 13rem;
+    padding: 0.5rem 0rem;
+
+    & .inputBox {
+      & input {
+        width: 12rem;
+        font-size: 1.4rem;
+        padding: 0rem 0.5rem;
+      }
+    }
+
+    & .options {
+      width: 17rem;
+      height: 21rem;
+      position: absolute;
+      top: 3.5rem;
+    }
+  }
+  .textSubmitMob {
+    font-size: 1.5rem;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    & p {
+      color: $white;
+    }
+  }
+  .EntriesCircle {
+    padding: 0.2rem 0.7rem;
+    background-color: transparent;
+    outline: none;
+  }
+  .handle_screen2{
+    width: 15rem;
+  
+  }
+}

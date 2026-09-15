@@ -1,0 +1,344 @@
+@import "./sass/_variable.scss";
+
+.screen_mob {
+  display: none;
+  place-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $white;
+}
+
+//css for MobPost model
+.screen_mobModel {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  place-items: center;
+  z-index: 9999;
+  overflow: auto;
+  background: $white;
+}
+
+.middle_screen_mob {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+}
+
+.topbar {
+  width: 94%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0rem;
+}
+.postCodeFullFrame {
+  position: relative;
+  width: 95vw;
+  height: calc(25rem + 15rem);
+}
+.postCodeFrame {
+  width: 100%;
+  height: 25rem;
+  border-radius: 0.5rem;
+  margin-top: .5rem;
+  background-color: $codeBackground;
+}
+.moreImages {
+  width: 100%;
+  height: 15rem;
+  overflow: auto;
+  position: relative;
+  border: 1px solid $brandclr-highlight;
+  border-bottom-left-radius: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: sticky;
+  bottom: 0rem;
+  border-radius: 0.5rem;
+
+  // background-color: $codeBackground;
+}
+
+.multipleMagesCode {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex: 0 0 auto; /* Prevent images from shrinking */
+  margin-right: 0.6rem; /* Optional spacing between images */
+  user-select: none;
+  background-color: $codeBackground;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-size: 1.2rem;
+  white-space: pre-wrap;
+  line-height: 1;
+  font-family: monospace;
+  display: block;
+  margin: 0;
+  overflow: auto;
+  padding: 1rem;
+  color: white;
+  
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray_highlight; // Adjust this color as needed
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $white; // Adjust this color as needed
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+    border: 2px solid $gray_highlight; // Adjust this color as needed
+  }
+}
+
+.code_section {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  // Custom scrollbar styles
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray_highlight; // Adjust this color as needed
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $white; // Adjust this color as needed
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+    border: 2px solid $gray_highlight; // Adjust this color as needed
+  }
+}
+.codeFrame {
+  width: 100%;
+  height: 100%;
+}
+//remove
+.code_handle {
+  // position: relative;
+  width: 50%;
+  height: 50%;
+  margin: 1rem;
+  & .code_inside {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.topLine {
+  width: 100%;
+  height: 0.2rem;
+  background-color: $gray_highlight;
+}
+
+.backArrowIcon {
+  display: grid;
+  place-items: center;
+
+  & .icon1 {
+    width: 4rem;
+    height: 4rem;
+    color: $subtitle;
+    cursor: pointer;
+  }
+}
+
+.button {
+  width: 9rem;
+  height: 4.5rem;
+  background-color: $brand-clr;
+  border-radius: 5rem;
+  color: $white;
+  font-size: 1.7rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.buttonDim {
+  width: 9rem;
+  height: 4.5rem;
+  background-color: $brandDim;
+  border-radius: 0.5rem;
+  color: $white;
+  font-size: 1.7rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.user_id {
+  width: 94%;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+
+  & .circle_img {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  & .attributes {
+    & > p {
+      font-size: 1.8rem;
+      padding: 0 1rem;
+      width: 100%;
+      font-weight: 500;
+    }
+  }
+}
+.langugeButtonCover{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.langugeButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: $brand-clr;
+  color: $white;
+  border-radius: 1rem;
+  letter-spacing: .1rem;
+  & svg{
+    margin-right: .5rem;
+  }
+}
+.belowPart_form {
+  margin-top: 1.5rem;
+  width: 94%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+}
+.selectedImage {
+  display: flex;
+  padding: 0;
+  max-width: 100vw;
+  width: auto;
+  overflow-x: auto; /* Use 'auto' for horizontal scrolling */
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  white-space: nowrap; /* Keeps children in a single line */
+  scrollbar-width: none; /* For Firefox to hide scrollbar */
+  -ms-overflow-style: none; /* For IE and Edge to hide scrollbar */
+
+  &::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera to hide scrollbar */
+  }
+}
+
+.typing_area {
+  background-color: $white;
+  padding: 0rem 1.5rem;
+  font-size: 2rem;
+  width: 100%;
+  word-break: break-all;
+  word-wrap: break-word;
+  resize: none;
+  outline: none;
+  border: none;
+  transition: height 0.2s;
+
+  // Custom scrollbar styles
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray_highlight; // Adjust this color as needed
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $white; // Adjust this color as needed
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+    border: 2px solid $gray_highlight; // Adjust this color as needed
+  }
+}
+
+// delete photot
+.attachClose {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  color: $white;
+  background-color: $black;
+  border-radius: 3rem;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.iconCover {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0rem 1rem 1rem 0rem;
+  border-radius: 50%;
+  border: 1px solid $brandclr-highlight;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+  rgba(0, 0, 0, 0.09) 0px 8px 4px;
+  transition: ease-in-out 0.5s;
+  color: $brand-clr;
+  background: $white;
+  & .icon {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  &:hover {
+    color: $white;
+    background: $brand-clr;
+  }
+}
+.icons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0rem;
+  border-bottom: 2px solid $gray_highlight;
+  z-index: 999;
+}
+
+.shift_icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+  .screen_mobModel,
+  .screen_mob {
+    display: grid;
+  }
+}

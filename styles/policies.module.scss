@@ -1,0 +1,142 @@
+@import "./sass/_variable.scss";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0rem;
+  width: 100vw;
+  background: $white;
+  overflow: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  width: 115rem;
+}
+
+.upperSection {
+  margin-top: 4rem;
+}
+
+.main_header, .main_header1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    line-height: 5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  
+}
+.main_header1{
+    font-size: 2.5rem;
+
+}
+.subtitle{
+    font-size: 1.6rem;
+    color: $subtitle;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 2.5rem;
+   
+}
+.subtitleHigh{
+    font-size: 1.8rem;
+    color: $codeBackground;
+    font-weight: 600;
+    margin-bottom: 2rem;
+   
+}
+.content{
+    font-size: 1.7rem;
+    color: $black;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    line-height: 2.5rem;
+  
+    & strong{
+        font-size: 1.6rem;
+        color: $subtitle;
+        font-weight: 600;
+        letter-spacing: 1px;
+      
+    }
+    & a{
+        cursor: pointer;
+        color: $brand-clr;
+        font-weight: 500;
+       
+    }
+}
+.content_list{
+    display: block;
+    margin-bottom: 1.5em;
+    padding-left: 4rem;
+    font-size: 1.7rem;
+    color: $black;
+    line-height: 2.5rem;
+
+    
+    & li {
+        list-style-type: disc;
+        margin-bottom: 1.5rem;
+
+        & a{
+            cursor: pointer;
+            color: $brand-clr;
+            font-weight: 500;
+          
+        }
+    }
+    & strong{
+        font-size: 1.6rem;
+        color: $subtitle;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+}
+
+
+/* DivTable.com */
+.divTable {
+  display: table;
+  width: 100%;
+  border: 1px solid $black;
+  margin-bottom: 2rem;
+}
+.divTableRow {
+  display: table-row;
+}
+
+.divTableCell
+ {
+  border: 1px solid $subtitle;
+  display: table-cell;
+  padding: 1rem;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+}
+
+@media (max-width:970px){
+    .center {
+        width: 95vw;
+      }
+      
+}
+
+@media  (max-width:767px) {
+    
+}
+
+@media (max-width:375px){
+    .content, .content_list{
+        & a{
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+    }
+    .divTable {
+        display: none;
+       }
+}

@@ -1,0 +1,857 @@
+@import "./sass/_variable.scss";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;1,100;1,200;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;1,100;1,200;1,400;1,500;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,700;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Patua+One&display=swap');
+
+.main {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+}
+
+.center {
+  width: 100vw;
+  height: calc(100vh - 6rem);
+  display: grid;
+  grid-template-columns: 25vw 75vw;
+  justify-content: center;
+
+}
+.centerProjectTask{
+  display:flex;
+  width: 100vw;
+  height: auto;
+  justify-content: center;
+}
+
+.drawer{
+  border-radius: 1.6rem 0 0 1.6rem;
+  font-family: "Inter", sans-serif, "Fira Sans";
+}
+.Wrapper {
+  width: 100%;
+  height: 100%;
+  position: sticky;
+  top: 0rem;
+  transition: all 0.3s ease;
+  scroll-behavior: smooth;
+  display: flex; // Flexbox for layout control
+  flex-direction: column; // Column layout to stack elements vertically
+  overflow: hidden; // Prevent content overflow outside the wrapper
+  border-right: 2px solid $textSoft2;
+
+}
+.sideBarMobHeader {
+  height: 6rem;
+  width: 100%;
+  background-color: $white;
+  position: sticky;
+  top: 0rem;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+}
+.sideBar {
+  grid-column: 1/2;
+  background: $white;
+  height: 100%;
+  padding: 2rem 0rem;
+  flex: 1;
+  overflow-y: auto;
+  // Custom scrollbar styles
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray_highlight; // Adjust this color as needed
+    border-radius: 0rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $white; // Adjust this color as needed
+    border-radius: 0rem;
+    border: 2px solid $gray_highlight; // Adjust this color as needed
+  }
+}
+
+.analytics {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.6rem;
+  padding: 1.5rem 2.5rem;
+  color: $subtitle;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0rem 0.5rem;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.05rem;
+  font-weight: 400;
+  &:hover {
+    background-color: $gray_highlight;
+    color: $brand-clr;
+    border-radius: 1rem;
+
+    &::before {
+      border-radius: 0.5rem;
+      height: 100%;
+      width: 0.5rem;
+      content: "";
+      background: $gray-content;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  & svg {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1.3rem;
+  }
+}
+.activeAnalytics {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.6rem;
+  padding: 1.5rem 2.5rem;
+  cursor: pointer;
+  background-color: $brandclr_highlight;
+  color: $brand-clr;
+  position: relative;
+  border-radius: 1rem;
+  margin: 0.5rem 0.5rem;
+  overflow: hidden;
+  letter-spacing: 0.05rem;
+  font-weight: 400;
+  & svg {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1.3rem;
+  }
+  &::before {
+    border-radius: 0.5rem;
+    height: 100%;
+    width: 0.5rem;
+    content: "";
+    background: $brand-clr;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.WrapperDisplay {
+  width: 100%;
+  height: 100%;
+  position: sticky;
+  top: 0rem;
+  transition: all 0.3s ease;
+  scroll-behavior: smooth;
+  display: flex; // Flexbox for layout control
+  flex-direction: column; // Column layout to stack elements vertically
+  overflow: hidden; // Prevent content overflow outside the wrapper
+}
+
+.display {
+  grid-column: 2/3;
+  background: $white;
+  height: 100%;
+  flex: 1;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+
+  // Custom scrollbar styles
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray_highlight; // Adjust this color as needed
+    border-radius: 0rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $white; // Adjust this color as needed
+    border-radius: 0rem 1rem 1rem 0rem;
+    border: 2px solid $gray_highlight; // Adjust this color as needed
+  }
+}
+
+//analytics
+//chart
+.containerChart {
+  height: 44rem;
+  background-color: $white;
+  padding: 1rem;
+  font-size: 1.5rem;
+  width: 100%;
+}
+.containerChartTask{
+  height: auto;
+  background-color: $white;
+  font-size: 1.5rem;
+  width: 100%;
+}
+.title {
+  padding: 1rem;
+  font-weight: 401;
+  text-align: center;
+  margin: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 1rem;
+  border: 1px dashed $gray_highlight;
+
+}
+
+.projectsAnalytics {
+  background: $brandclr-highlight;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem;
+  border-radius: 1rem;
+  flex-wrap: wrap;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0rem;
+}
+
+.number {
+  color: $subtitle;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.content {
+  font-size: 1.6rem;
+  color: $gray_content;
+}
+
+//history
+.history {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  & svg {
+    width: 12rem;
+    height: 12rem;
+    margin-bottom: 2rem;
+    color: $gray_highlight;
+  }
+  p {
+    font-size: 2.5rem;
+    color: $gray_highlight;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+  }
+}
+
+//balance
+
+.balance {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  & > p {
+    font-size: 2.1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05rem;
+    padding: 1rem;
+  }
+}
+
+.balanceBox {
+  background: $brandclr-highlight;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.totalBalance {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.amount {
+  font-size: 1.8rem;
+  margin-left: 1rem;
+  color: $gray-content;
+  font-weight: 500;
+}
+//css for mobileTab
+.side_bar {
+  display: none;
+  margin-left: 0.5rem;
+  background-color: $white;
+  border-radius: 5rem;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 6rem;
+  height: 6rem;
+  z-index: 9;
+  opacity: 0.5;
+  transition: ease-out 1s;
+  overflow: hidden;
+  margin: auto;
+}
+
+.side_bar_onClick {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin-left: 0.5rem;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 35rem;
+  width: 6rem;
+  border-radius: 5rem;
+  opacity: 1;
+  z-index: 999;
+  transition: ease-out 1s;
+  overflow: hidden;
+}
+
+.headline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.headline_none {
+  display: none;
+}
+
+.tabCircle {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5rem;
+  background-color: transparent;
+  border: 0.6rem solid $brand-clr;
+}
+
+.iconWith_name {
+  margin-top: 2.1rem;
+  padding: 0.9rem 1.5rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  color: $subtitle;
+  cursor: pointer;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 6rem;
+  background-color: $white;
+  opacity: 0.5;
+
+  & .net_icons {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &:hover {
+    background-color: $gray_highlight;
+    color: $brand-clr;
+  }
+}
+
+.iconWith_name1 {
+  margin-top: 1rem;
+  padding: 0.9rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  color: $white;
+  cursor: pointer;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 6rem;
+  background-color: $brand-clr;
+
+  & .net_icons {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+//settings and privacy
+.blockedUsers {
+  padding: 3rem 0rem 0rem;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.blockedUsersContent {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.blockedUsersHeader2 {
+  color: $gray-content;
+  font-size: 1.6rem;
+  letter-spacing: 0.03rem;
+  margin: 2.5rem 0rem;
+}
+.blockedUsersHeader {
+  font-size: 2rem;
+  color: $black;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  word-spacing: 0.1rem;
+}
+.users {
+  width: 70%;
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  // border: 1px solid red;
+  & .user_image_cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+  }
+  .image_container {
+    position: relative;
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 5rem;
+    overflow: hidden;
+    background-color: $white;
+    outline: 2px solid $brandclr-highlight;
+    flex-shrink: 0;
+    & .user_image {
+      border-radius: 5rem;
+    }
+  }
+  & p {
+    margin-left: 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+}
+.handle_btn {
+  width: 10rem;
+  height: 3.5rem;
+  background-color: $brandclr_highlight;
+  display: grid;
+  place-items: center;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in;
+  border: 1px solid $brand_clr;
+
+  & button {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    background-color: transparent;
+    cursor: pointer;
+    color: $brand_clr;
+    height: 100%; //added by arshad
+    width: 100%; //added by arshad
+  }
+  &:hover {
+    background-color: $brand_clr;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  &:hover > button {
+    color: $white;
+  }
+}
+//settings edit profile
+.fullEdit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  background-color: $white;
+  border-radius: 1rem;
+  // overflow-y: auto;
+
+}
+.upperPortion {
+  width: 100%;
+}
+
+.instruction {
+  margin: 3rem 0rem 1rem;
+
+  & p {
+    font-size: 1.6rem;
+  }
+}
+
+.imageSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7rem;
+
+  & .profileImage {
+    position: absolute;
+    top: -4rem;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 10rem;
+    background-color: $gray_highlight;
+    outline: 0.6rem solid $white;
+    z-index: 3;
+    overflow: hidden;
+  }
+  & .background {
+    position: absolute;
+    top: -4.5rem;
+    height: 11rem;
+    width: 11rem;
+    border-radius: 11rem;
+    background-color: $brandclr_highlight;
+    outline: 0.5rem solid $gray_highlight;
+    box-shadow: 5px 10px 18px 10px $gray_highlight;
+  }
+
+  & .backgroundImage {
+    position: relative;
+    height: 15rem;
+    width: 100%;
+    overflow: hidden;
+    background-color: $gray_content;
+    border-radius: 1rem;
+    outline: 0.5rem solid $gray_highlight;
+    z-index: 2;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 12px 0px;
+
+  }
+}
+.input_bx {
+  position: relative;
+
+  & input {
+    margin-top: 2rem;
+    height: 5rem;
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1.5rem 1.5rem 0rem;
+    border-radius: .5rem;
+    border: 1px solid $textSoft;
+    background: $background1;
+    color: $black;
+  }
+}
+
+.label {
+  position: absolute;
+  top: 3.5rem;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  color: $gray_content;
+  pointer-events: none;
+  transition: 0.1s;
+}
+
+.input_bx input:valid ~ .label,
+.input_bx input:focus ~ .label {
+  color: $brand-clr;
+  transform: translateX(0px) translateY(-7px);
+  font-size: 1.3rem;
+  font-weight: 500;
+  background: $background1;
+  letter-spacing: 0.1rem;
+}
+
+//used in social media
+.input_bx:hover .crossBtnContainer {
+  visibility: visible;
+  /* Show the crossBtnContainer on hover */
+}
+//error line
+.errorLine {
+  color: red;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  padding-left: 1rem;
+  text-align: left;
+}
+
+.input_bxButton {
+  margin: 2rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+
+  & button {
+    width: 20rem;
+    padding: 1.2rem 0rem;
+    background: $brand_clr;
+    border-radius: 20rem;
+    border: none;
+    color: $white;
+    font-weight: 500;
+    font-size: 1.7rem;
+    text-shadow: 1px 1px 1px #000;
+    cursor: pointer;
+
+    &:hover {
+      background: #063a6e;
+    }
+  }
+}
+.inputDesc {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.textArea {
+  margin-top: 2.2rem;
+  height: 10rem;
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 2.5rem 4.4rem 0rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid $textSoft;
+  background: $background1;
+  color: $black;
+  resize: none;
+}
+
+.labelInputDesc {
+  position: absolute;
+  top: 3.5rem;
+  // text-align: center;
+  left: 1.5rem;
+  // padding: 10px;
+  font-size: 1.5rem;
+  color: $gray_content;
+  // text-transform:lowercase;
+  pointer-events: none;
+  transition: 0.1s;
+}
+
+.inputDesc textarea:valid ~ .labelInputDesc,
+.inputDesc textarea:focus ~ .labelInputDesc {
+  color: $brand-clr;
+  transform: translateX(0px) translateY(-7px);
+  font-size: 1.3rem;
+  font-weight: 500;
+  background: $background1;
+  // border-top: 1px solid $brand-clr;
+  letter-spacing: 0.1rem;
+}
+
+.inputBoxes input:valid ~ .labelInput,
+.inputBoxes input:focus ~ .labelInput {
+  color: $brand-clr;
+  transform: translateX(0px) translateY(-7px);
+  font-size: 1.3rem;
+  font-weight: 500;
+  background: $background;
+  // border-top: 1px solid $brand-clr;
+  letter-spacing: 0.1rem;
+}
+
+.maxCharBio {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0rem 2rem 0.5rem 0rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: $gray-content;
+  z-index: 99;
+}
+
+//pending
+.user_del_info {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  flex-direction: column;
+  font-size: 1.5rem;
+  word-spacing: 0.2rem;
+  text-align: center;
+  & p {
+    margin: 1rem;
+  }
+  & h6 {
+    font-size: 2.2rem;
+  }
+}
+
+//responsive
+@media (min-width: 1367px){
+  .centerProjectTask {
+    width: 130rem;
+  }
+}
+@media (max-width: 970px) {
+  .center {
+    grid-template-columns: 30vw 70vw;
+  }
+  .blockedUsersContent,
+  .users, .fullEdit {
+    width: 90%;
+  }
+  .sideBar {
+    padding: 1rem 0rem;
+  }
+
+  .analytics {
+    padding: 1.3rem 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    & svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+  .activeAnalytics {
+    padding: 1.3rem 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    & svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+  .history {
+    & svg {
+      width: 11rem;
+      height: 11rem;
+      margin-bottom: 2rem;
+    }
+    p {
+      font-size: 2rem;
+      padding: 0rem 1rem;
+    }
+  }
+  .containerChart {
+    height: 36rem;
+  }
+}
+.containerChartH3{
+font-size: 1.8rem;
+font-weight: 600;
+padding: 2rem 0rem;
+}
+@media (max-width: 767px) {
+  .main{
+    padding:0rem;
+  }
+  .center {
+    margin-top: 0rem;
+    width: 100vw;
+    grid-template-columns: 1fr;
+    gap: 0rem;
+  }
+  .Wrapper,
+  .WrapperDisplay {
+    height: 100vh;
+    position: static;
+  }
+
+  .sideBarMobHeader {
+    display: flex;
+  }
+.title{
+  display: none;
+}
+  .sideBar,
+  .display {
+    height: 100dvh;
+    border-radius: 0rem;
+    padding-bottom: 12.5rem;
+    // Custom scrollbar styles
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+  
+  .display {
+    grid-column: 1/2;
+    border-radius: 0rem;
+  }
+  // for moble
+  .side_bar {
+    display: block;
+  }
+  //settings and privacy
+  .blockedUsers {
+    padding: 1rem 0rem 0rem;
+  }
+  .blockedUsersHeader{
+  // display: none;
+  }
+  .blockedUsersContent,
+  .users, .fullEdit {
+    width: 90%;
+  }
+
+  .handle_btn {
+    width: 8rem;
+    height: 3.2rem;
+
+    & button {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media (max-width: 596px) {
+  .center {
+    grid-template-columns: 100vw;
+  }
+  .projects {
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .users {
+    & p {
+      margin-left: 0.5rem;
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: 0rem;
+    }
+  }
+  .blockedUsersContent,
+  .users, .fullEdit {
+    width: 98%;
+  }
+}

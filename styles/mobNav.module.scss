@@ -1,0 +1,325 @@
+/* navbar style start  */
+@import "./sass/_variable.scss";
+
+//  {/* navbar */}
+.mobile_navbar {
+  display: none;
+}
+
+// more option in profile
+.proficon_upper {
+  position: relative;
+  display: grid;
+  place-content: center;
+  width: 6.5rem;
+  height: 4.5rem;
+  border: 1px solid red;
+
+  & .prof_icon {
+    position: relative;
+    width: 3.9rem;
+    height: 3.9rem;
+    border-radius: 4rem;
+    overflow: hidden;
+    cursor: pointer;
+    //   border: 1px solid red;
+  }
+}
+
+.nav_icons {
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  width: 6.5rem;
+  height: 4.5rem;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  border: 1px solid red;
+
+  & .net_notification_dot {
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: rgba(255, 0, 0, 1);
+    border-radius: 50%;
+    position: absolute;
+    top: 0.05rem;
+    right: 2rem;
+    z-index: 9999;
+  }
+
+  .message_dot {
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: rgba(255, 0, 0, 1);
+    border-radius: 50%;
+    position: absolute;
+    top: -0.5rem;
+    right: 1rem;
+    z-index: 9999;
+    display: grid;
+    place-content: center;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: $white;
+  }
+
+  & .home_svg {
+    width: 2.8rem;
+    height: 2.8rem;
+    fill: none;
+    stroke: $subtitle;
+    stroke-width: 0.14rem;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .home_svg_add {
+    width: 5rem;
+    height: 5rem;
+    stroke: #949494;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover .home_svg {
+    stroke: $brand-clr;
+  }
+}
+
+.circle_cover {
+  display: grid;
+  place-content: center;
+  position: relative;
+  // border: 1px solid red;
+
+  .me_circle {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 4.8rem;
+    background-color: transparent;
+    border: 2px solid $brand-clr;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+#search_input {
+  // border: 1px solid rgb(43, 40, 233);
+  padding: 0.8rem 1.4rem;
+  width: 39.8rem;
+  border-radius: 0px;
+  z-index: 999;
+  background: white;
+  position: absolute;
+}
+@media (max-width: 767px) {
+  .mobile_navbar {
+    display: block;
+    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .uppar_nav {
+    height: 6rem;
+    width: 100vw;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+  }
+
+  .content {
+    width: 98vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contentCover {
+    width: 98vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(25, 0, 255);
+  }
+  .logo_search {
+    display: flex;
+    align-items: center;
+    // width: 70%;
+    border: 1px solid red;
+
+    & .logo_image {
+      & svg {
+        width: 3.7rem;
+        height: 100%;
+        margin: 0rem 1rem;
+      }
+    }
+  }
+
+  .search {
+    // border: 1px solid red;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+    // {/* search control */}
+    & input {
+        position: absolute;
+      width: 29rem;
+      border: 1px solid $border;
+      background: $background;
+      color: $black;
+      border-radius: 3rem;
+      font-size: 1.6rem;
+      padding: 0.8rem 3.4rem;
+      transition: all 0.4s ease-in-out;
+
+      &::placeholder {
+        color: $gray_content;
+      }
+
+      &:focus {
+        border: 1px solid $brand_clr;
+        outline: none;
+      }
+    }
+  }
+
+  //  {/* search icon */}
+  .search_icon {
+    position: absolute;
+    padding-left: 1.4rem;
+
+    // width:5.5rem;
+    & .search_svg {
+      width: 1.6rem;
+      height: 100%;
+      fill: none;
+      stroke: $gray-content;
+      stroke-width: 0.25rem;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  .icons {
+    display: flex;
+    justify-content: flex-end;
+    width: 30vw;
+    border: 1px solid rgb(43, 255, 0);
+  }
+
+  .lower_nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    place-content: center;
+    height: 6rem;
+    width: 100vw;
+    background: $white;
+    list-style-type: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 100;
+  }
+
+  .lower_content {
+    width: 98vw;
+    display: grid;
+    place-content: center;
+  }
+
+  .lower_nav_icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98vw;
+    height: 100%;
+  }
+
+  // css for add option for mobile
+  // mobile options
+  .boxes {
+    position: fixed;
+    width: 100vw;
+    bottom: 6rem;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    & .boxs_center {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & > div {
+        border-radius: 5rem;
+        width: 5rem;
+        height: 5rem;
+        border: 2px solid $brand-clr;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+    }
+  }
+
+  .notification_modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    border-radius: 0rem;
+  }
+  .closeButton {
+    display: flex;
+  }
+}
+@media (max-width: 591px) {
+  .logo_search {
+    & .logo_image {
+      margin: 0rem 1rem;
+    }
+  }
+
+  .search {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+    // {/* search control */}
+    & input {
+      width: 40vw;
+    }
+  }
+
+  #search_input {
+    width: 70vw;
+  }
+
+  //  {/* search result modal */}
+  .search_modal {
+    width: 70vw;
+  }
+
+  .boxes {
+    & .boxs_center {
+      width: 85%;
+    }
+  }
+}

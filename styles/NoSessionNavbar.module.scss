@@ -1,0 +1,155 @@
+/* navbar style start  */
+@import "./sass/_variable.scss";
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  width: 100vw;
+  background: $white;
+  list-style-type: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+//  {/* navbar center */}
+.navbar_section {
+  display: flex;
+  justify-content: space-between;
+  width: 95.1vw;
+  height: 100%;
+  align-items: center;
+}
+
+// {/* logo and search input */}
+.logo_search {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  width: 53.2rem;
+}
+
+// {/* logo control */}
+.logo_image {
+  margin-right: 2rem;
+
+  & svg {
+    width: 14rem;
+    height: 100%;
+  }
+}
+
+.logo_imageMob {
+  display: none;
+}
+
+//  {/* navbar icons section  */}
+.icons {
+  display: flex;
+  align-items: center;
+}
+.image_frame{
+display: flex;
+justify-content:space-between ;
+align-items: center;
+
+& > p{
+  font-size: 2rem;
+  color: $brand-clr;
+  font-weight: 500;
+  margin-right: 1rem;
+}
+}
+.winnersImage{
+width: 4rem;
+height: 4rem;
+border-radius: 4rem;
+overflow: hidden;
+position: relative;
+
+
+}
+.signInButt {
+  // width: 100%;
+  display: grid;
+  place-items: center;
+  & input {
+    display: grid;
+    place-items: center;
+    width: 10rem;
+    height: 4rem;
+    background-color: $brand-clr;
+    border-radius: 4rem;
+    color: $white;
+    cursor: pointer;
+    font-size: 1.8rem;
+    line-height: 0rem;
+    transition: all .3s ease;
+
+
+    &:hover {
+      background-color: #063a6e;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+.signUpButt {
+  display: grid;
+  place-items: center;
+  & input {
+    display: grid;
+    place-items: center;
+    width: 10rem;
+    height: 4rem;
+    background-color: $white;
+    color: $brand_clr;
+    cursor: pointer;
+    font-size: 1.8rem;
+    line-height: 0rem;
+    font-weight: 600;
+    transition: all .3s ease;
+
+    &:hover {
+      background: transparent;
+      color: #063a6e;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+//responsiveness
+@media (max-width: 970px) {
+  .navbar_section {
+    width: 95vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar_section {
+  }
+  .logo_image {
+    display: none;
+  }
+  .logo_imageMob {
+    display: block;
+    margin: 0rem;
+
+    & svg {
+      width: 3.7rem;
+      height: 100%;
+    }
+  }
+}
+@media (max-width: 425px) {
+  .signInButt, .signUpButt {
+    & input {
+      width: 8rem;
+      height: 3.5rem;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "cursor.cmdk.autoSelect": true,
+    "cursor.composer.cmdPFilePicker2": true,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.inlineSuggest.edits.experimental.useInterleavedLinesDiff": "always",
+    "editor.inlineSuggest.edits.experimental.useMixedLinesDiff": "whenPossible",
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "editor.inlineSuggest.syntaxHighlightingEnabled": true
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "designation": "Software Engineer",
+    "role": "Develop and maintain software applications, participate in software design and architecture discussions, write clean and efficient code."
+  },
+  {
+    "id": 2,
+    "designation": "Senior Software Engineer",
+    "role": "Lead software development projects, mentor junior developers, contribute to architectural decisions, and ensure high-quality code."
+  },
+  {
+    "id": 3,
+    "designation": "Software Architect",
+    "role": "Design and architect complex software solutions, create technical specifications, evaluate technologies, and provide guidance on software development best practices."
+  },
+  {
+    "id": 4,
+    "designation": "Technical Lead",
+    "role": "Lead a team of developers, oversee technical aspects of projects, coordinate with stakeholders, and provide technical guidance and direction."
+  },
+  {
+    "id": 5,
+    "designation": "Full Stack Developer",
+    "role": "Develop both client-side and server-side web applications, work on frontend and backend technologies, design and implement user interfaces, and manage databases."
+  },
+  {
+    "id": 6,
+    "designation": "Frontend Developer",
+    "role": "Implement engaging user interfaces, optimize web performance, develop responsive designs, and collaborate with backend developers to integrate APIs."
+  },
+  {
+    "id": 7,
+    "designation": "Backend Developer",
+    "role": "Develop and maintain server-side logic, build APIs, manage databases, ensure application security and performance, and support frontend integration."
+  },
+  {
+    "id": 8,
+    "designation": "Product Manager",
+    "role": "Define product strategy, prioritize features, coordinate between cross-functional teams, and ensure that products meet customer needs and business objectives."
+  },
+  {
+    "id": 9,
+    "designation": "Data Scientist",
+    "role": "Analyze and interpret complex data sets, develop machine learning models, implement algorithms, and provide insights to drive data-driven decisions."
+  },
+  {
+    "id": 10,
+    "designation": "Machine Learning Engineer",
+    "role": "Design and develop machine learning systems, implement algorithms and models, optimize performance, and integrate machine learning solutions into applications."
+  },
+  {
+    "id": 11,
+    "designation": "DevOps Engineer",
+    "role": "Automate and streamline development processes, manage infrastructure and deployment pipelines, ensure scalability, reliability, and security of applications."
+  },
+  {
+    "id": 12,
+    "designation": "Cloud Solutions Architect",
+    "role": "Design and deploy cloud-based solutions, develop cloud architecture, optimize cloud resources, and ensure scalability, reliability, and security of cloud applications."
+  },
+  {
+    "id": 13,
+    "designation": "Network Engineer",
+    "role": "Design, implement, and maintain network infrastructure, troubleshoot network issues, optimize network performance, and ensure network security."
+  },
+  {
+    "id": 14,
+    "designation": "Cybersecurity Analyst",
+    "role": "Monitor and analyze security systems, identify and respond to security threats, implement security measures to protect against cyber attacks, and conduct security assessments."
+  },
+  {
+    "id": 15,
+    "designation": "Embedded Systems Engineer",
+    "role": "Design and develop embedded systems software, program microcontrollers, interface with hardware components, and optimize system performance for specific applications."
+  },
+  {
+    "id": 16,
+    "designation": "Graphics Designer",
+    "role": "Create visual concepts, develop layouts, design logos, illustrations, and graphics for various media platforms, and collaborate with clients to understand their design requirements."
+  },
+  {
+    "id": 17,
+    "designation": "UI/UX Designer",
+    "role": "Design user interfaces, develop wireframes and prototypes, conduct user research and testing, and ensure the usability and visual appeal of digital products and applications."
+  },
+  {
+    "id": 18,
+    "designation": "Web Designer",
+    "role": "Design and create visually appealing and user-friendly websites, develop web layouts, graphics, and multimedia elements, and ensure cross-browser compatibility and responsiveness."
+  },
+  {
+    "id": 19,
+    "designation": "Motion Graphics Designer",
+    "role": "Create animated graphics and visual effects for videos, films, and multimedia presentations, develop storyboards, and collaborate with creative teams to produce engaging motion graphics content."
+  },
+  {
+    "id": 20,
+    "designation": "Logo Designer",
+    "role": "Design unique and memorable logos, develop brand identities, incorporate client's vision and requirements into logo designs, and ensure consistency and scalability across various applications."
+  }
+]

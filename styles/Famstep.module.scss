@@ -1,0 +1,999 @@
+@import "./sass/_variable.scss";
+
+//  {/* profile page */}
+.section_profile_page {
+  width: 100vw;
+  height: 100%;
+}
+
+// {/* Upper three cards section */}
+.main_profile {
+  display: flex;
+  justify-content: center;
+
+  //   {/* for center the things */}
+  & .profile_header {
+    width: 95.1vw;
+    display: grid;
+    grid-template-columns: 20vw 51vw 21.5vw;
+    grid-template-rows: auto auto;
+    margin-top: 1.8rem;
+    height: auto;
+    column-gap: 1.8rem;
+  }
+}
+
+// {/* first profile card */}
+.firstCard {
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  padding: 0rem 1rem;
+  border-radius: 1.6rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 12px 0px;
+  width: 100%;
+  padding: 2rem 0rem;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  & .profile_pic {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 100%;
+    overflow: hidden;
+    outline: 2px solid $brandclr-highlight;
+    z-index: 99;
+  }
+
+  & .profile_name {
+    text-align: center;
+    margin: 1rem 0rem 1.5rem;
+    width: 100%;
+    & .title {
+      color: $subtitle;
+      font-weight: 500;
+      // max-width: 90%;
+      word-wrap: break-word;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    & .titleP {
+      color: $subtitle;
+      font-size: 1.5rem;
+    }
+    & > h3 {
+      font-weight: 500;
+      width: auto;
+      color: $black;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      word-wrap: break-word;
+    }
+  }
+}
+
+.centerUpperImage {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background: $white;
+  position: relative;
+  border: 1px solid $textSoft2;
+  border-bottom: none;
+  border-radius: 1.6rem 1.6rem 0rem 0rem;
+}
+.centerImageCover {
+  border-radius: 1.6rem 1.6rem 0rem 0rem;
+  width: 100%;
+  height: 18rem;
+  position: relative;
+  overflow: hidden;
+  background: $black;
+  outline: 1px solid $brandclr-highlight;
+}
+//blue tick icons
+.blue_tick {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.2rem;
+  position: relative;
+  & .blue_tick1 {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    bottom: 0.2rem;
+  }
+}
+
+.follow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  position: relative;
+
+  & > p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $brand-clr;
+    font-weight: 500;
+  }
+}
+
+//   {/* second card upper part */}
+.secondCard_upper {
+  grid-column: 2/ 3;
+  grid-row: 2 / 3;
+  border: 1px solid $textSoft2;
+  border-radius: 0rem 0rem 1.6rem 1.6rem;
+  border-top: none;
+  width: 100%;
+
+  & .name_icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.2rem;
+    padding: 1rem 1rem 0rem 1rem;
+
+    & .name {
+      & .nameP {
+        color: $black;
+        font-size: 2rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.profile_bio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.5rem 1rem 1rem 1rem;
+  border-top: 1px solid $textSoft2;
+  border-radius: 1.6rem;
+}
+
+.profileAbout {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: $subtitle;
+  margin-bottom: 0.2rem;
+}
+.user_bio {
+  overflow-y: auto;
+  width: 100%;
+  height: 6rem;
+  color: $subtitle;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: $background1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+
+  // Custom scrollbar styles
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray_highlight; // Adjust this color as needed
+    border-radius: 0rem 1rem 1rem 0rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $white; // Adjust this color as needed
+    border-radius: 0rem 1rem 1rem 0rem;
+    border: 2px solid $gray_highlight; // Adjust this color as needed
+  }
+}
+
+.bio_button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // padding-top: 1.5rem;
+  & > input {
+    cursor: pointer;
+    width: 100%;
+    height: 6rem;
+    background-color: $background1;
+    border-radius: 1.6rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $subtitle;
+    &:hover {
+      background-color: $strip;
+      color: $brand-clr;
+    }
+  }
+}
+
+// edit and settings icons
+.settingsIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: auto;
+  height: 2rem;
+  & > svg {
+    fill: $black;
+    stroke: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+
+  .coverEditPencilDot {
+    position: relative;
+  }
+  .UnfinishedDot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: red;
+  }
+  .edit {
+    margin-right: 0.5rem;
+  }
+}
+
+//   {/* second card lower part */}
+.rank {
+  background-color: $background1;
+  border-radius: 1.6rem;
+  display: flex;
+  grid-column: 3 / 4;
+  grid-row: 1/ 3;
+  padding: 1rem 0rem 0rem 1rem;
+  & .rank_levelCover {
+    width: 100%;
+
+    & .skills {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      left: 0;
+      background-color: $background1; // Ensure the background color covers the content behind it
+      z-index: 1; // Ensure it stays on top
+      border-bottom: 2px solid $background;
+      gap: 2rem;
+      padding-bottom: 1rem;
+      & > p {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: $prime_highlight;
+        margin: 0rem;
+      }
+    }
+  }
+}
+
+.skillsEditIcon {
+  cursor: pointer;
+  position: relative;
+  padding-right: 1rem;
+  .UnfinishedDot {
+    position: absolute;
+    top: 0;
+    left: 1.8rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: red;
+  }
+  & > .skillsEdit {
+    width: 2rem;
+    height: 2rem;
+    color: $gray-content;
+  }
+}
+
+.announcementContent {
+  font-size: 1.5rem;
+  color: $subtitle;
+  line-height: 2.3rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding-top: 1rem;
+  font-weight: 500;
+  max-height: 28rem;
+  height: 100%;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  // Custom scrollbar styles
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray_highlight; // Adjust this color as needed
+    border-radius: 0rem 1rem 1rem 0rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $white; // Adjust this color as needed
+    border-radius: 0rem 1rem 1rem 0rem;
+    border: 2px solid $gray_highlight; // Adjust this color as needed
+  }
+}
+
+// tabs css start
+.disable-bg-color {
+  background-color: transparent !important;
+}
+.profileTabBig {
+  width: 95.1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.6rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 12px 0px;
+}
+.profile_tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.8rem;
+  width: 100vw;
+  position: sticky;
+  top: 6.5rem;
+  z-index: 99;
+
+  & .tab_center {
+    background-color: $white;
+    width: 115rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    // flex-wrap: nowrap;
+    position: relative;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    border-radius: 1.6rem;
+    &.dragging {
+      scroll-behavior: smooth;
+      cursor: grab;
+    }
+    &.dragging input:checked + label {
+      user-select: none;
+      pointer-events: none;
+    }
+  }
+  // .tab_centerSecondary{
+  //   width: 100rem;
+  // }
+  //new code for slider
+
+  .tab_center::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab_center input[type="radio"] {
+    display: none;
+  }
+
+  .tab_center input:checked + #labelMe,
+  .tab_center input:checked + #labelProfile {
+    color: $white;
+  }
+
+  #labelMe {
+    display: block;
+    color: $gray-content;
+    height: 5rem;
+    width: 25%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+    border-radius: 5rem;
+  }
+
+  .gliderME {
+    position: absolute;
+    background: $brand-clr;
+    width: 24.8%;
+    height: 5rem;
+    border-radius: 5rem;
+    transition: transform 0.3s ease;
+  }
+
+  input[id="tab1"]:checked ~ .gliderME {
+    transform: translateX(0%);
+  }
+
+  input[id="tab2"]:checked ~ .gliderME {
+    transform: translateX(100%);
+  }
+
+  input[id="tab3"]:checked ~ .gliderME {
+    transform: translateX(200%);
+  }
+
+  input[id="tab4"]:checked ~ .gliderME {
+    transform: translateX(300%);
+  }
+  #labelProfile {
+    display: block;
+    color: $gray-content;
+    height: 5rem;
+    width: 33.33%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+  }
+  & .gliderProfile {
+    position: absolute;
+    // top: 0.5rem;
+    // left: .5rem;
+    background: $brand-clr;
+    width: 33%;
+    height: 5rem;
+    border-radius: 5rem;
+    transition: transform 0.3s ease;
+  }
+
+  input[id="tab1"]:checked ~ .gliderProfile {
+    transform: translateX(0%);
+  }
+
+  input[id="tab2"]:checked ~ .gliderProfile {
+    transform: translateX(100%);
+  }
+
+  input[id="tab3"]:checked ~ .gliderProfile {
+    transform: translateX(200%);
+  }
+}
+
+// cards css start
+.acchieventes {
+  width: 100vw;
+  padding: 1.8rem 0rem 8rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.acchieve_center {
+  width: 95.1vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  place-items: center;
+}
+
+.acchieve_centerAbout {
+  display: grid;
+  grid-template-columns: 115rem;
+  gap: 1rem;
+  place-items: center;
+}
+
+@media (min-width: 1367px) {
+  .main_profile {
+    & .profile_header {
+      width: 130rem;
+      grid-template-columns: 27.5rem 71.2rem 27.5rem;
+    }
+  }
+  .profileTabBig {
+    width: 130rem;
+  }
+  .acchieve_center {
+    width: 130rem;
+  }
+}
+
+@media (max-width: 970px) {
+  .main_profile {
+    //   {/* for center the things */}
+    & .profile_header {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto auto auto auto;
+      width: 98vw;
+      margin-top: 1rem;
+      justify-content: center;
+      gap: 0rem;
+    }
+  }
+
+  .firstCard {
+    grid-column: 1 / 2;
+    grid-row: 2/ 4;
+    border-radius: 0;
+    & .profile_pic {
+      margin-top: -8rem;
+    }
+    & .profile_name {
+      & .title {
+        font-size: 1.6rem;
+      }
+      & .titleP {
+        font-size: 1.6rem;
+      }
+      & > h3 {
+        font-size: 2rem;
+      }
+    }
+  }
+  .follow {
+    font-size: 1.8rem;
+  }
+
+  .centerUpperImage {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .centerImageCover {
+    height: 22rem;
+  }
+  .secondCard_upper {
+    grid-column: 1/ 3;
+    grid-row: 4/ 5;
+    background: $background1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 1.6rem 1.6rem;
+    padding: 1rem;
+    border: none;
+
+    & .name_icon {
+      width: 100%;
+      padding: 0rem 0rem 1rem;
+    }
+  }
+
+  #nameP {
+    font-size: 2rem;
+    color: $subtitle;
+  }
+
+  .profile_bio {
+    border: 1px solid $textSoft2;
+    border-radius: 1.6rem;
+  }
+
+  .rank {
+    padding-top: 1rem;
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    border-radius: 0rem;
+    border-top: none;
+    border-bottom: 2px solid $white;
+  }
+
+  // / tabs css start
+  .profileTabBig {
+    width: 98vw;
+  }
+  .profile_tab {
+    margin-top: 2rem;
+
+    & .tab_center {
+      width: 100vw;
+    }
+
+    #labelMe,#labelProfile {
+      height: 4.5rem;
+      font-size: 1.4rem;
+    }
+    .gliderME, .gliderProfile {
+      // width: 16.6%;
+      height: 4.5rem;
+    }
+  }
+
+  // cards css start
+  .acchieventes {
+    width: 100vw;
+    padding: 1rem 0rem 8rem 0rem;
+  }
+  .acchieve_center {
+    width: 98vw;
+    gap: 1rem;
+  }
+
+  .acchieve_centerAbout {
+    grid-template-columns: 98vw;
+  }
+}
+.strangerMobCover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stranger,
+.strangerMob {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+
+  .follow_button {
+    // background-color: $brandclr_highlight;
+    display: grid;
+    place-items: center;
+    border-radius: 0.5rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out 0.1s;
+    width: auto;
+    padding: 1rem 2rem;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  .followed_button {
+    background-color: $brand-clr;
+  }
+}
+.follow_buttons,
+.follow_buttonsNoHover {
+  width: 8rem;
+  height: 3rem;
+  background-color: $gray_highlight;
+  display: grid;
+  place-items: center;
+  border-radius: 2rem;
+  transition: all 0.3s ease-in;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  & button {
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    background-color: transparent;
+    cursor: pointer;
+    color: $black;
+    height: 100%; //added by arshad
+    width: 100%; //added by arshad
+  }
+
+  &:hover {
+    background-color: $brand_clr;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  &:hover > button {
+    color: $white;
+  }
+}
+
+.follow_buttonsNoHover {
+  cursor: not-allowed;
+
+  & button {
+    cursor: not-allowed;
+  }
+  &:hover {
+    background-color: $brandclr-highlight;
+    box-shadow: none;
+    &:hover > button {
+      color: $brand-clr;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .main_profile {
+    //   {/* for center the things */}
+    & .profile_header {
+      grid-template-columns: 80vw;
+      grid-template-rows: repeat(5, auto);
+      height: auto;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+  .centerUpperImage {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .centerImageCover {
+    border-radius: 1.6rem 1.6rem 0rem 0rem;
+    height: 15rem;
+  }
+  .firstCard {
+    grid-column: 1 / 2;
+    grid-row: 2/ 3;
+    padding: 2rem 0rem;
+    border-radius: 0rem 0rem 1.6rem 1.6rem;
+    margin-right: 0rem;
+    border-top: none;
+    border: 1px solid $textSoft2;
+    box-shadow: none;
+  }
+
+  .secondCard_upper {
+    grid-column: 1 / 2;
+    grid-row: 5/ 6;
+    margin-left: 0rem;
+    border-radius: 1.6rem;
+    margin-bottom: 0.2rem;
+    padding: 1rem;
+    background: $white;
+    border: 1px solid $textSoft2;
+  }
+
+  // edit and settings icons
+  .settingsIcon {
+    // display: none;
+  }
+
+  .profile_info {
+    padding: 1rem 2rem 0rem;
+  }
+
+  .user_bio {
+    overflow-y: auto;
+    width: 100%;
+    height: auto;
+    max-height: 10rem;
+    color: $gray-content;
+    font-size: 1.7rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .rank {
+    grid-column: 1 / 2;
+    grid-row: 3/ 4;
+    // min-height: 18rem;
+    border-radius: 1.6rem;
+    margin-left: 0rem;
+    background: $background;
+    border: 1px solid $textSoft2;
+    padding: 0rem ;
+    & .skills {
+      background-color: $background; // Ensure the background color covers the content behind it
+      border-bottom: 2px solid $textSoft;
+      border-radius: 1.6rem 1.6rem 0rem 0rem;
+      padding: .5rem;
+    }
+  }
+.announcementContent{
+padding: 0rem 1rem;
+}
+  .profileTabBig {
+    width: 80vw;
+  }
+  .profile_tab {
+    margin-top: 1rem;
+
+    & .tab_center {
+      border-radius: 1.6rem;
+      width: 100vw;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    #labelMe , #labelProfile{
+      flex-shrink: 0;
+      margin: 0;
+      border-radius: 1rem;
+      background: $background;
+      width: 25%;
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+    .gliderME, .gliderProfile {
+      flex-shrink: 0;
+      width: 25%;
+      border-radius: 1.6rem;
+      position: absolute;
+      transition: transform 0.3s ease;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      height: 100%;
+    }
+    .gliderProfile, #labelProfile{
+      width:33.33%
+    }
+
+    input[id="tab1"]:checked ~ .gliderME {
+      transform: translateX(0%);
+    }
+
+    input[id="tab2"]:checked ~ .gliderME {
+      transform: translateX(100%);
+    }
+
+    input[id="tab3"]:checked ~ .gliderME {
+      transform: translateX(200%);
+    }
+
+    input[id="tab4"]:checked ~ .gliderME {
+      transform: translateX(300%);
+    }
+  }
+
+  // cards css start
+  .acchieve_center {
+    width: 80vw;
+    gap: 0.5rem;
+  }
+
+  .acchieve_centerAbout {
+    grid-template-columns: 80vw;
+  }
+}
+
+@media (max-width: 591px) {
+  .main_profile {
+    //   {/* for center the things */}
+    & .profile_header {
+      grid-template-columns: 97vw;
+    }
+  }
+  .centerImageCover {
+    height: 10rem;
+  }
+  .follow {
+    width: 90vw;
+  }
+  .rank {
+    padding-top: 0rem;
+  }
+
+  .profileTabBig {
+    width: 97vw;
+  }
+  .profile_tab {
+    width: 100vw;
+
+    & .tab_center {
+      width: 100vw;
+      overflow-x: auto;
+    }
+
+    // #labelMe, #labelProfile {
+    //   width: 12rem;
+    // }
+    // .gliderME, .gliderProfile {
+    //   width: 12rem;
+    // }
+  }
+
+  .acchieve_center {
+    gap: 0.5rem;
+    width: 98vw;
+  }
+
+  .acchieve_centerAbout {
+    grid-template-columns: 98vw;
+  }
+
+  .firstCard {
+    & .profile_name {
+      & .title {
+        font-size: 1.5rem;
+      }
+      & .titleP {
+        font-size: 1.5rem;
+      }
+      & > h3 {
+        font-size: 2rem;
+      }
+    }
+  }
+  .follow {
+    font-size: 1.6rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+@media (max-width: 447px) {
+  .profile_tab {
+    width: 100vw;
+
+    & .tab_center {
+      width: 100vw;
+      overflow-x: auto;
+    }
+
+    #labelMe, #labelProfile {
+      width: 12rem;
+    }
+    .gliderME, .gliderProfile {
+      width: 12rem;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .centerImageCover {
+    height: 9rem;
+  }
+}
+@media (max-width: 320px) {
+  .secondCard_upper {
+    padding: 0.5rem 1rem;
+
+    & .name_icon {
+      padding: 0rem 0rem 0.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+
+  .firstCard {
+    padding: 1rem 0rem;
+  }
+
+  .user_bio {
+    font-size: 1.6rem;
+  }
+
+  .rank {
+    & div {
+      & .rank_level {
+        & .ranknumber {
+          margin: 1rem 0rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 280px) {
+  .user_bio {
+    // Custom scrollbar styles
+    &::-webkit-scrollbar {
+      width: 0.8rem;
+    }
+  }
+}

@@ -1,0 +1,221 @@
+//Sidebar
+@import './sass/_variable.scss';
+
+.containerSidebar {
+    position: sticky;
+    top: 4rem;
+    width: 100%;
+}
+
+.sidebarClose{
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 4rem;
+}
+.user {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.userImage {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.userDetail {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding-bottom: .2rem;
+
+}
+
+.userTitle {
+    font-size: 1.3rem;
+    color: $textSoft;
+}
+
+.list {
+    list-style: none;
+}
+
+.cat {
+    color: $textSoft;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin: 1rem 0rem;
+    letter-spacing: .1rem;
+}
+
+.logout {
+    padding: 2rem;
+    margin: .5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    background: none;
+    border: none;
+    width: 100%;
+    font-size: 1.5rem;
+    color: $white;
+}
+
+.logout:hover {
+    background-color: #2e374a;
+}
+
+//MenuLink
+.containerMenuLink {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: .5rem 0rem;
+    border-radius: 1rem;
+    transition: all .3s;
+    width: 100%;
+}
+
+.MenuIcon {
+    width: 1.6rem;
+    height: 1.6rem;
+
+}
+
+.iconTitle {
+    font-size: 1.6rem;
+
+}
+
+.containerMenuLink:hover,
+.active {
+    background-color: #2e374a;
+}
+
+//Navbar
+.containerNavbar {
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: $bgSoft;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.HamburgerMenu{
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    display: none;
+}
+.title {
+    color: $textSoft;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #2e374a;
+    padding: .8rem;
+    border-radius: 1rem;
+}
+
+.input {
+    background-color: transparent;
+    border: none;
+    color: $white;
+    font-size: 1.6rem;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.icons {
+    display: flex;
+    gap: 2rem;
+}
+
+.iconsNavbar {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+}
+
+//footer
+.container {
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+    color: $textSoft;
+    font-size: 2rem;
+    border-radius: 1rem;
+    background: linear-gradient(to right, #182237, #253352);
+    width: 100%;
+
+}
+
+.logo {
+    font-weight: bold;
+    color: $brand_clr;
+    letter-spacing: .05rem;
+}
+
+.text {
+    font-size: 1.4rem;
+}
+
+//responsive
+@media (max-width: 768px) {
+//Navbar
+.title {
+    font-size: 1.2rem;
+}
+.menu {
+    gap: 1rem;
+}
+.search {
+   width: 12rem;
+}
+.input {
+   
+    font-size: 1.2rem;
+}
+.icons {
+    display: flex;
+    gap: 1rem;
+}
+.HamburgerMenu{
+    display: block;
+}
+
+//sidebar
+.sidebarClose{
+    display: block;
+}
+}

@@ -1,0 +1,340 @@
+@import "./sass/_variable.scss";
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 3.5rem;
+  width: 100vw;
+  //   background: $white;
+  overflow: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  width: 115rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem 0rem;
+}
+
+.contact_directly,
+.contact_directlyMob {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contact_directlyMob {
+  display: none;
+}
+.also1 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  letter-spacing: 0.5px;
+  word-spacing: 0.5px;
+  word-wrap: break-word;
+}
+.also2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: $gray_content;
+  margin-bottom: 7rem;
+  line-height: 2.8rem;
+  word-wrap: break-word;
+}
+.also {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  word-wrap: break-word;
+}
+.email {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 3.3rem;
+  & h2 {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    letter-spacing: 0.5px;
+    color: $brand-clr;
+    word-wrap: break-word;
+
+  }
+  & p {
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    word-wrap: break-word;
+    word-break: break-all;
+
+  }
+}
+
+// {/* main form section */}
+.signup_form {
+  width: 42rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  border-radius: 1rem;
+  height: auto;
+  margin: 1rem 0rem 3rem;
+  padding: 4rem 0rem;
+
+  // {/* form content */}
+  & > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & .login_title {
+      text-align: center;
+      color: $black;
+      margin-bottom: 1rem;
+
+      & .join_famstep {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 500;
+        line-height: 3.4rem;
+      }
+    }
+  }
+}
+
+// control size of forms inner content
+.signup_form form {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: auto;
+  width: 80%;
+
+  & input {
+    margin-top: 2rem;
+    height: 5.5rem;
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1.5rem 1.5rem 0rem;
+    border-radius: 1rem;
+    border: 1px solid $border;
+    background: $background;
+    color: $black;
+    // font-family: 'Source Sans Pro', sans-serif ;
+  }
+
+  // button
+  & button {
+    margin-top: 2.5rem;
+    width: 100%;
+    padding: 1.2rem 0rem;
+    background: $brand_clr;
+    border-radius: 20rem;
+    border: none;
+    color: $white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      background: #063a6e;
+    }
+  }
+}
+
+//error line
+.errorLine {
+  color: red;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  padding-left: 1rem;
+  text-align: left;
+}
+
+// label animation
+.input_bx {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  top: 3.8rem;
+  left: 1.5rem;
+  // padding: 10px;
+  font-size: 1.6rem;
+  color: $gray_content;
+  // text-transform:lowercase;
+  pointer-events: none;
+  transition: 0.1s;
+}
+.inputDesc {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+
+.textArea {
+  margin-top: 2.2rem;
+  height: 12rem;
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 2.5rem 4.4rem 0rem 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid $border;
+  background: $background;
+  color: $black;
+  resize: none;
+  outline:none;
+  box-shadow: none;
+  transition: border-color 0.3s ease;
+}
+
+.labelInputDesc {
+  position: absolute;
+  top: 3.5rem;
+  // text-align: center;
+  left: 1.5rem;
+  // padding: 10px;
+  font-size: 1.6rem;
+  color: $gray_content;
+  // text-transform:lowercase;
+  pointer-events: none;
+  transition: 0.1s;
+}
+.textAreaError {
+  border: 1px solid red;
+}
+.inputDesc textarea:valid ~ .labelInputDesc,
+.inputDesc textarea:focus ~ .labelInputDesc {
+  color: $brand-clr;
+  transform: translateX(0px) translateY(-7px);
+  font-size: 1.3rem;
+  font-weight: 500;
+  background: $background;
+  // border-top: 1px solid $brand-clr;
+  letter-spacing: 0.1rem;
+}
+.input_bx input:valid ~ .label,
+.input_bx input:focus ~ .label {
+  color: $brand-clr;
+  transform: translateX(0px) translateY(-7px);
+  font-size: 1.3rem;
+  font-weight: 500;
+  background: $background;
+  // border-top: 1px solid $brand-clr;
+  letter-spacing: 0.1rem;
+}
+
+// media query for 4k screen
+@media (min-height: 1040px) {
+  .megaFooterCover {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+// media query for mobile screen
+@media (max-width: 970px) {
+  .center {
+    width: 95vw;
+    justify-content: space-between;
+    margin: 1rem 0rem;
+    gap: 3rem;
+  }
+  .contact_directly {
+    margin-top: -5rem;
+  }
+
+  .also1 {
+    font-size: 3rem;
+  }
+  .also2 {
+    font-size: 1.8rem;
+    margin-bottom: 5rem;
+  }
+  .also {
+    font-size: 2rem;
+  }
+  .signup_form {
+    width: 40rem;
+    margin: 0rem 0rem 3rem;
+    padding: 3rem 0rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .center {
+    width: 80vw;
+    flex-wrap: wrap-reverse;
+  }
+
+  .contact_directlyUpper {
+    display: none;
+  }
+  .contact_directly {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .contact_directlyMob {
+    display: flex;
+    width: 100%;
+  }
+  .also1 {
+    margin-bottom: 1rem;
+  }
+  .signup_form_cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .signup_form {
+    margin: 1rem 0rem 6rem;
+    width: 42rem;
+  }
+}
+@media (max-width: 591px) {
+  .center {
+    width: 95vw;
+  }
+  .signup_form form {
+  width: 85%;
+  }
+  .also1,
+  .also2,
+  .also {
+    margin-left: 1rem;
+  }
+  .contact_directly {
+    margin-bottom: 3rem;
+  }
+  .signup_form {
+    width: 95vw;
+  }
+  .email {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .email {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    line-height: 2.2rem;
+
+    & p{
+        margin-bottom: 2rem;
+    }
+
+  }
+}

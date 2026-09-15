@@ -1,0 +1,553 @@
+@import "./sass/_variable.scss";
+
+//contest_ details
+.detailsMain {
+  width: 100vw;
+  background-color: $background;
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.detailsCenter {
+  margin-top: 2rem;
+  width: 115rem;
+  display: grid;
+  grid-template-columns: 83rem 30rem;
+  grid-template-rows: 25rem 16rem auto;
+  gap: 1.8rem;
+}
+
+// top image and circle image with heading
+.TopImage {
+  position: relative;
+  grid-column: 1/3;
+  grid-row: 1/2;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: $white;
+  & > img {
+    // overflow: hidden;
+    border-radius: 1rem;
+  }
+}
+
+.circleImageCover {
+  position: absolute;
+  bottom: -6rem;
+  left: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75rem;
+  z-index: 9;
+}
+
+.circleImageWithSecond {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.circleImage {
+  position: absolute;
+  overflow: hidden;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 12rem;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.imageWhiteCircle {
+  position: relative;
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 12.5rem;
+  background-color: transparent;
+  outline: 0.5rem solid $white;
+  box-shadow: 1px 9px 17px 4px rgba(0, 0, 0, 0.61);
+}
+
+.imageWhiteCircle1 {
+  position: absolute;
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 12.5rem;
+  background-color: white;
+  box-shadow: inset 0px 0px 6px 7px rgba(0, 0, 0, 0.25);
+}
+
+.contestHeading {
+  width: 60rem;
+  border-radius: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.contestTheme {
+  background-image: url("../assets/newIcons/texture.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 4.6rem;
+  display: flex;
+  align-items: center;
+  padding: 0rem 2rem;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+  & p {
+    color: $brand-clr;
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+}
+
+.belowheading {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  padding: 0rem 2rem;
+  background-color: $brand-clr;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  box-shadow: inset 1px 23px 17px -19px rgba(0, 0, 0, 0.61);
+
+  & p {
+    color: $white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+
+    & .public {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+// {/* top image ke niche time and date */}
+.contestTimingAndCircle {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-color: $white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contestTiming {
+  width: 70rem;
+  margin: 2rem 0rem 0rem 12rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.heading,
+.heading1 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: $gray-content;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.2rem;
+  position: relative;
+}
+
+.heading {
+  &::after {
+    content: "";
+    width: 14rem;
+    height: 0.2rem;
+    background-color: $background;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.heading1 {
+  &::after {
+    content: "";
+    width: 14rem;
+    height: 0.2rem;
+    background-color: $background;
+    position: absolute;
+    bottom: 0;
+    left: -5rem;
+  }
+}
+
+.contestData {
+  font-size: 1.6rem;
+  color: $black;
+  font-weight: 410;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contestCom {
+  width: 1.8rem;
+  height: 1.6rem;
+  margin-bottom: -3px;
+  margin-right: .3rem;
+}
+//   {/* tab and more about contest */}
+.contestbelowDetails {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  background-color: $white;
+  border-radius:1rem;
+  margin-bottom: 1rem;
+}
+
+// tabs css start
+
+.content_center {
+  width: 100%;
+  height: 4rem;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+  background-color: $brandclr-highlight;
+  position: sticky;
+  top: 6rem;
+
+  & .tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: $gray-content;
+    width: 8.4rem;
+    height: 4rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+
+    // overflow: hidden;
+    &:hover {
+      background-color: $gray_highlight;
+      color: $brand-clr;
+    }
+  }
+
+  & .active_tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 8.4rem;
+    height: 4rem;
+    text-align: center;
+    cursor: pointer;
+    color: $brand-clr;
+    z-index: 2;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 8.4rem;
+      height: 0.3rem;
+      background-color: $brand-clr;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.indicator {
+  position: absolute;
+  top: 0rem;
+  background: $white;
+  width: 100%;
+  height: 4rem;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+}
+
+.indicator1 {
+  background: $white;
+
+  // left: -1;
+  // transform: translateX(-2rem);
+}
+
+.contestDetails {
+  padding: 2rem 1.5rem;
+  line-height: 2.2rem;
+}
+
+.contestDetailsHeading {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.contestAbout {
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
+  white-space: pre-line;
+  
+}
+
+//right side wala section
+.clickToStart {
+  grid-column: 2/3;
+  grid-row: 2/4;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: 0rem 1.7rem;
+  border-radius: 1rem;
+  height: 70vh;
+  position: sticky;
+  top: 6.5rem;
+  margin-bottom: 1rem;
+}
+
+.clickToStartOption {
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  & .enroll {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+    color: $gray-content;
+    line-height: 2.8rem;
+  }
+
+  &::after {
+    content: "";
+    width: 25rem;
+    height: 0.3rem;
+    background-color: $background;
+  }
+}
+.notify {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+  color: $brand-clr;
+  // line-height: 2.5rem;
+}
+.notify1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  color: $black;
+  line-height: 2.5rem;
+}
+
+.clickToStartButton {
+  display: grid;
+  place-items: center;
+  width: 14rem;
+  height: 4rem;
+  background-color: $brand-clr;
+  border-radius: 4rem;
+  color: $white;
+  cursor: pointer;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+
+  &:hover {
+    background-color: #063a6e;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.socialShare {
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: $gray-content;
+    line-height: 2.8rem;
+  }
+}
+
+.socialShareIcons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.socialIcons1 {
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+}
+
+.socialIcons2 {
+  position: relative;
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+}
+
+//responsiveness
+@media (max-width: 970px) {
+  .detailsCenter {
+    margin-top: 1rem;
+    width: 98vw;
+    grid-template-columns: 98vw;
+    grid-template-rows: 22rem 14rem 15rem auto;
+    gap: 1rem;
+  }
+
+  .TopImage {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+  }
+
+  .circleImageCover {
+    width: 85vw;
+    left: unset;
+  }
+
+  .contestHeading {
+    width: 70vw;
+  }
+
+  .contestTimingAndCircle {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    
+  }
+  
+  .contestTiming {
+    width: 67vw;
+    justify-content: space-between;
+  }
+  
+  //   {/* tab and more about contest */}
+  .contestbelowDetails {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  //right side wala section
+  .clickToStart {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    height: auto;
+    position: unset;
+    z-index: 999;
+    margin-bottom: 0rem;
+
+  }
+
+  .clickToStartOption {
+    &::after {
+      display: none;
+    }
+  }
+
+  .socialShare {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .detailsCenter {
+    margin-top: .5rem;
+    grid-template-rows: 20rem 14rem auto auto;
+    gap: .5rem;
+  }
+
+  // {/* top image ke niche wala circle image  */}
+
+  .circleImageCover {
+    width: 98vw;
+    flex-direction: column;
+    bottom: -14.5rem;
+  }
+  .circleImage {
+    width: 10rem;
+    height: 10rem;
+  }
+  
+  .imageWhiteCircle, .imageWhiteCircle1 {
+    width: 10.5rem;
+    height: 10.5rem;
+    border-radius: 10.5rem;
+  }
+  
+  .circleImageWithSecond {
+    margin-bottom: 2rem;
+  }
+
+  .contestHeading {
+    width: 100%;
+  }
+
+  //   {/* top image ke niche wala circle image and time and date */}
+  .contestTimingAndCircle {
+    grid-row: 3/4;
+    border-radius: 0;
+    padding: 0rem 1rem 2rem ;
+  }
+  
+  .contestTiming {
+    width: 100%;
+    justify-content: space-around;
+    margin: 0rem;
+    flex-wrap: wrap;
+  }
+  .heading1 {
+    &::after {
+      content: "";
+      width: 7rem;
+      left: 0rem;
+    }
+  }
+  
+  .startOn, .level {
+    margin-right: .5rem;
+     }
+  .startOn, .level, .endsOn{
+    margin-top: 2rem;
+  }
+  .contestbelowDetails {
+    padding-bottom: 12rem;
+  }
+  //right side wala section
+  .clickToStart {
+    width: 100vw;
+    height: 6rem;
+    position: fixed;
+    left: 0;
+    top: calc(100vh - 12rem);
+    border-radius: 0rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .clickToStartOption {
+    & .enroll {
+      display: none;
+    }
+  }
+
+  .clickToStartButton {
+    margin-bottom: 0;
+  }
+}

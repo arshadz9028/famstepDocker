@@ -1,0 +1,48 @@
+name: CICD
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Set permissions for Docker socket
+        run: sudo chmod 666 /var/run/docker.sock
+
+      - name: Add current user to Docker group
+        run: sudo usermod -aG docker $USER
+
+      - name: Login to docker hub
+        run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build docker image
+        run: docker build -t 518990/pulsar .
+
+      - name: Publish image to docker hub
+        run: docker push 518990/pulsar:latest
+               
+  deploy:
+    needs: build
+    runs-on: [new]
+    steps:
+      - name: Login to docker hub
+        run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }} 
+      - name: Stop running container
+        run: docker stop nodejs-app-container
+      - name: Remove exited container
+        run: docker remove nodejs-app-container  
+      - name: Delete container
+        run: docker rmi 518990/pulsar:latest
+      - name: Pull image from docker hub
+        run: docker pull 518990/pulsar:latest
+
+      - name: Delete old container
+        run: docker rm -f nodejs-app-container
+
+      - name: Run docker container
+        run: docker run -d -p 3000:3000 --name nodejs-app-container 518990/pulsar:latest

@@ -1,0 +1,682 @@
+@import "./sass/_variable.scss";
+
+//handling the contest page
+.mainContest {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.contestCenter {
+  margin-top: 3rem;
+  width: 95.1vw;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+}
+
+//header
+.contestHeader {
+  width: 100%;
+  height: auto;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+
+  & p {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  & .levelColor {
+    color: $prime_highlight;
+    font-weight: 500;
+  }
+}
+
+//ongoing Tournamentds header
+.ongoingTournaments {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 0rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid $gray_highlight;
+}
+
+.tournamentsHeader {
+  font-size: 2.2rem;
+  font-weight: 600;
+
+  &::after {
+    content: "";
+    width: 19.3rem;
+    height: 0.3rem;
+    margin-top: 0.5rem;
+    background-color: $brand-clr;
+    position: absolute;
+  }
+}
+
+//ongoingContestGround
+
+.ongoingContestGround {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  max-width: 98.1vw;
+  gap: 2rem;
+  // border: 1px solid red;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+// No collaborations message
+.noCollaboration {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  margin: 2rem 0;
+  background-color: #f8f9fa;
+  border-radius: 1rem;
+  border: 1px dashed $gray_highlight;
+  color: $subtitle;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 3rem;
+}
+
+.noCollabIcon {
+  margin-bottom: 2rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Collaboration Card */
+.collabCard {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  border-left: 4px solid $brand-clr;
+  border-top: 1px solid $textSoft2;
+  border-right: 1px solid $textSoft2;
+  border-bottom: 1px solid $textSoft2;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  width: 35rem;
+}
+
+.collabCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Created Collabs Specific */
+.createdCard {
+  border-color: $brand-clr;
+  background: #f0f4ff;
+}
+
+/* Joined Collabs Specific */
+.joinedCard {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+
+/* Pending Collabs Specific */
+.pendingCard {
+  border-color: #f59e0b;
+  background: #fffbeb;
+}
+
+/* Card Content */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  width: 90%;
+}
+
+.cardTitle {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #1e293b;
+}
+
+.cardStatus {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+.statusRibbon,
+.statusRibbon1,
+.statusRibbon2 {
+  background: $brand-clr;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: absolute;
+  top: 2rem;
+  right: -2.5rem;
+  transform: rotate(45deg);
+  width: 13rem;
+  text-align: center;
+}
+.statusRibbon1 {
+  background: #10b981;
+}
+.statusRibbon2 {
+  background: #f59e0b;
+}
+// .created .cardStatus {
+//   background: #dbeafe;
+//   color: var(--primary);
+// }
+// .joined .cardStatus {
+//   background: #dcfce7;
+//   color: var(--success);
+// }
+
+.cardDetails {
+  margin: 1rem 0;
+  color: $subtitle;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  font-size: 1.4rem;
+}
+
+.progressBar {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+.progressFill {
+  height: 100%;
+  background: $brand-clr;
+  width: 65%;
+  transition: width 0.3s;
+}
+
+/* Action Buttons */
+.cardActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.btn {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  &:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.primaryBtn {
+  background: $brand-clr;
+  color: white;
+  &:hover {
+    background: $brand_Dark;
+  }
+}
+
+.secondaryBtn {
+  background: $brandclr-highlight;
+  color: $brand-clr;
+}
+
+/* Card-specific button styles */
+.createdCard {
+  .primaryBtn {
+    background: $brand-clr;
+    &:hover {
+      background: $brand_Dark;
+    }
+  }
+  
+  .secondaryBtn {
+    background: #dbeafe;
+    color: $brand-clr;
+  }
+}
+
+.joinedCard {
+  .primaryBtn {
+    background: #10b981;
+    &:hover {
+      background: #059669;
+    }
+  }
+  
+  .secondaryBtn {
+    background: #d1fae5;
+    color: #10b981;
+  }
+}
+
+.pendingCard {
+  .primaryBtn {
+    background: #f59e0b;
+    &:hover {
+      background: #d97706;
+    }
+  }
+  
+  .secondaryBtn {
+    background: #fef3c7;
+    color: #f59e0b;
+  }
+}
+
+//form
+// .contestCard {
+//   width: 100%;
+//   height: 34rem;
+//   display: flex;
+//   flex-direction: column;
+//   background-color: $white;
+//   border-radius: 2rem;
+//   transition: all 0.3s ease-in-out;
+
+//   cursor: pointer;
+
+//   &:hover {
+//     box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+//   }
+// }
+
+// .imageUpperCover {
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   width: 100%;
+//   height: 16rem;
+// }
+
+// .imageUpper {
+//   position: absolute;
+//   top: 0;
+//   height: 4rem;
+//   width: 100%;
+//   background-color: $brand-clr;
+//   border-radius: 2rem 2rem 0rem 0rem;
+// }
+
+// .contestImageCover {
+//   width: 100%;
+//   height: 14.5rem;
+//   position: relative;
+//   overflow: hidden;
+//   border-radius: 2rem;
+//   border-bottom: 1px solid $brand-clr;
+// }
+
+// .contestName {
+//   font-size: 1.8rem;
+//   font-weight: 410;
+//   margin: 0.5rem 0rem 1rem 0rem;
+//   text-align: center;
+// }
+
+// .belowPartCover {
+//   height: 11rem;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+// .endsIn {
+//   font-size: 1.5rem;
+//   font-weight: 500;
+//   color: $gray-content;
+// }
+
+// .time {
+//   font-size: 2rem;
+//   font-weight: 500;
+//   color: $prime_highlight;
+// }
+
+// .contestButton {
+//   width: 15rem;
+//   height: 4rem;
+//   background-color: $brand-clr;
+//   display: grid;
+//   place-items: center;
+//   border-radius: 2rem;
+//   transition: all 0.3s ease-in;
+
+//   & input {
+//     font-size: 1.6rem;
+//     font-style: normal;
+//     font-weight: 500;
+//     background-color: transparent;
+//     color: $white;
+//     cursor: pointer;
+//   }
+
+//   &:hover {
+//     background-color: #063a6e;
+//     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+//       rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+//     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//   }
+// }
+
+//NO contest message
+.contestMessage {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0rem 0rem;
+  overflow: hidden;
+}
+
+.contestMessageCover1 {
+  width: 25rem;
+  height: 25rem;
+  border: 2px solid $gray_highlight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all ease 0.3s;
+
+  &:hover {
+    border: 2px solid $brand-clr;
+  }
+}
+.contestMessageCover2 {
+  width: 20rem;
+  height: 20rem;
+  border: 4px solid $gray_highlight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all ease 0.3s;
+}
+.contestMessageCover {
+  width: 15rem;
+  height: 15rem;
+  background: $white;
+  border: 8px solid $brandclr-highlight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all ease 0.3s;
+
+  &:hover {
+    box-shadow: none;
+
+    // Target the .contestMessageIcon inside .contestMessageCover when hovering
+    .contestMessageIcon {
+      color: $brand-clr;
+    }
+  }
+}
+
+.contestMessageIcon {
+  width: 8rem;
+  height: 8rem;
+  color: $gray_highlight;
+  transition: all ease 0.3s;
+}
+
+.contestMessageContent {
+  margin-top: 3rem;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: $gray_highlight;
+  text-align: center;
+  line-height: 2.8rem;
+}
+//ens NO contest message
+//tooltips
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: $white;
+  border: 2px solid $brandclr-highlight;
+  color: $black;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 0.8rem 0.8rem;
+  position: absolute;
+  z-index: 1;
+  bottom: -4rem; /* Position the tooltip above the text */
+  left: -3rem;
+  opacity: 0;
+  transition: all ease 0.3s; /* Speed of appearance */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+//responsiveness
+@media (min-width: 1367px) {
+  .contestCenter {
+    width: 130rem;
+  }
+}
+@media (max-width: 970px) {
+  .contestCenter {
+    margin-top: 2rem;
+    width: 98vw;
+  }
+
+  .contestHeader {
+    & .levelColor {
+      display: block;
+    }
+  }
+
+  //ongoing Tournamentds header
+  .ongoingTournaments {
+    margin: 2rem 0rem;
+  }
+
+  //ongoingContestGround
+
+  .ongoingContestGround {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .contestCenter {
+    margin-top: 0.5rem;
+    padding-bottom: 5rem;
+  }
+  //ongoingContestGround
+  .ongoingContestGround {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.8rem;
+  }
+  .collabCard {
+    width: 40rem;
+  }
+
+  .contestCard {
+    height: 36rem;
+  }
+  .contestMessage {
+    margin-bottom: 5rem;
+  }
+  .contestMessageContent {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 591px) {
+  .contestCenter {
+    width: 95vw;
+  }
+
+  .contestHeader {
+    & .levelColor {
+      display: inline-block;
+    }
+  }
+
+  //ongoingContestGround
+  .ongoingContestGround {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .contestCard {
+    width: 85vw;
+    height: 34rem;
+  }
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.userImage {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+
+}
+
+.applicantsContainer {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.applicantsHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+.applicantsIcon {
+  margin-right: 8px;
+  color: #4a90e2;
+}
+
+.applicantsList {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.applicantAvatar {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: -8px;
+  
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.remainingCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $brand-clr;
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: -8px;
+  z-index: 99;
+}
+
+.noApplicants {
+  color: #888;
+  font-style: italic;
+  font-size: 14px;
+}
+@media (max-width: 414px) {
+.collabCard {
+    min-width: 30rem;
+    max-width: 30rem;
+  }
+}

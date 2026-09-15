@@ -1,0 +1,2019 @@
+@import "./sass/_variable.scss";
+
+//  {/* profile page */}
+.section_profile_page {
+  width: 100vw;
+  height: 100%;
+}
+
+// {/* Upper three cards section */}
+.main_profile {
+  display: flex;
+  justify-content: center;
+
+  //   {/* for center the things */}
+  & .profile_header {
+    width: 95.1vw;
+    display: grid;
+    grid-template-columns: 20vw 51vw 21.5vw;
+    grid-template-rows: auto auto;
+    margin-top: 1.8rem;
+    height: auto;
+    column-gap: 1.8rem;
+  }
+}
+
+// {/* first profile card */}
+.firstCard {
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  padding: 0rem 1rem;
+  border-radius: 1.6rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 12px 0px;
+  width: 100%;
+  padding: 2rem 0rem;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  & .profile_pic {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 100%;
+    overflow: hidden;
+    outline: 2px solid $brandclr-highlight;
+    z-index: 99;
+  }
+
+  & .profile_name {
+    text-align: center;
+    margin: 1rem 0rem 1.5rem;
+    width: 100%;
+    & .title {
+      color: $subtitle;
+      font-weight: 500;
+      // max-width: 90%;
+      word-wrap: break-word;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    & .titleP {
+      color: $subtitle;
+      font-size: 1.5rem;
+    }
+    & > h3 {
+      font-weight: 500;
+      width: auto;
+      color: $black;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+  }
+}
+
+.centerUpperImage {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background: $white;
+  position: relative;
+  border: 1px solid $textSoft2;
+  border-bottom: none;
+  border-radius: 1.6rem 1.6rem 0rem 0rem;
+}
+.centerImageCover {
+  border-radius: 1.6rem 1.6rem 0rem 0rem;
+  width: 100%;
+  height: 18rem;
+  position: relative;
+  overflow: hidden;
+  background: $black;
+  outline: 1px solid $brandclr-highlight;
+}
+//blue tick icons
+.blue_tick {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.2rem;
+  position: relative;
+  & .blue_tick1 {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    bottom: 0.2rem;
+  }
+}
+
+.follow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  position: relative;
+
+  & > p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $brand-clr;
+    font-weight: 500;
+  }
+}
+
+//   {/* second card upper part */}
+.secondCard_upper {
+  grid-column: 2/ 3;
+  grid-row: 2 / 3;
+  border: 1px solid $textSoft2;
+  border-radius: 0rem 0rem 1.6rem 1.6rem;
+  border-top: none;
+  width: 100%;
+
+  & .name_icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.2rem;
+    padding: 0rem 1rem;
+
+    & .nameP {
+      color: $black;
+      font-size: 2rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.profile_info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0rem 0.5rem;
+  width: 100%;
+
+  & .prof_achivements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .prof_achivements_cover {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & .prof_achivementsP {
+        margin-right: 0.5rem;
+        color: $black;
+        font-weight: 500;
+      }
+
+      & > p {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: $gray-content;
+        margin: 1rem 0rem;
+      }
+    }
+  }
+}
+
+.profile_bio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.5rem 1rem 1rem 1rem;
+  border-top: 1px solid $textSoft2;
+  border-radius: 1.6rem;
+}
+
+.profile_bio_tablet {
+  width: 95%;
+  // display: none;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border-top: 2px solid $textSoft;
+}
+.profileAbout {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: $subtitle;
+  margin-bottom: 0.2rem;
+}
+.user_bio {
+  overflow-y: auto;
+  width: 100%;
+  height: 6rem;
+  color: $subtitle;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: $background1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+
+  // Custom scrollbar styles
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray_highlight; // Adjust this color as needed
+    border-radius: 0rem 1rem 1rem 0rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $white; // Adjust this color as needed
+    border-radius: 0rem 1rem 1rem 0rem;
+    border: 2px solid $gray_highlight; // Adjust this color as needed
+  }
+}
+
+.bio_button,
+.bio_button_tablet {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // padding-top: 1.5rem;
+  & > input {
+    cursor: pointer;
+    width: 100%;
+    height: 6rem;
+    background-color: $background1;
+    border-radius: 1.6rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $subtitle;
+    &:hover {
+      background-color: $strip;
+      color: $brand-clr;
+    }
+  }
+}
+.bio_buttonStranger {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // padding-top: 1.5rem;
+  & > p {
+    width: 100%;
+    min-height: 6rem;
+    color: $subtitle;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background: $background1;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+  }
+}
+
+.handleBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 0rem;
+  color: $gray_highlight;
+  text-align: center;
+  & p {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+}
+.userBlocked {
+  width: 18rem;
+  height: 18rem;
+  margin-bottom: 2.8rem;
+  color: $gray_highlight;
+}
+
+.highlights_first_tablet {
+  width: 100%;
+
+  & .highlights {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+    width: 100%;
+    & .pic {
+      height: 3rem;
+      width: 3rem;
+      margin-right: 0rem;
+      flex-shrink: 0;
+    }
+
+    & > p {
+      position: relative;
+      font-size: 1.7rem;
+      margin-left: 0.5rem;
+      width: calc(100% - 6rem);
+      line-break: auto;
+      word-wrap: break-word;
+    }
+  }
+}
+.highlightsSeemore {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -1rem;
+  font-size: 1.2rem;
+  color: $brand-clr;
+  cursor: pointer;
+}
+
+// edit and settings icons
+.settingsIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: auto;
+  height: 2rem;
+  & > svg {
+    fill: $black;
+    stroke: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+
+  .coverEditPencilDot {
+    position: relative;
+  }
+  .UnfinishedDot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: red;
+  }
+  .edit {
+    margin-right: 0.5rem;
+  }
+}
+// {/* second card lower part */}
+.mob_rank {
+  display: none;
+}
+
+.rank {
+  background-color: $background1;
+  border-radius: 1.6rem 1.6rem 0rem 0rem;
+  display: flex;
+  grid-column: 3 / 4;
+  grid-row: 1/ 2;
+
+  & .rank_levelCover {
+    width: 100%;
+
+    & .rank_level {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      & .ranknumber {
+        text-align: center;
+        margin: 1.3rem 0rem;
+        width: 100%;
+
+        & > .rankScore {
+          color: $black;
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+        }
+
+        & > p {
+          font-size: 1.6rem;
+          font-weight: 500;
+          line-height: 2rem;
+          color: $brand-clr;
+        }
+      }
+
+      // &::before {
+      //   content: "";
+      //   width: 0.1rem;
+      //   height: 3rem;
+      //   background-color: $background;
+      //   position: absolute;
+      //   top: .8rem;
+      //   // right: 0rem;
+      // }
+    }
+  }
+}
+
+.follow_buttons,
+.follow_buttonsNoHover {
+  width: 8rem;
+  height: 3rem;
+  background-color: $gray_highlight;
+  display: grid;
+  place-items: center;
+  border-radius: 2rem;
+  transition: all 0.3s ease-in;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  & button {
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    background-color: transparent;
+    cursor: pointer;
+    color: $black;
+    height: 100%; //added by arshad
+    width: 100%; //added by arshad
+  }
+
+  &:hover {
+    background-color: $brand_clr;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  &:hover > button {
+    color: $white;
+  }
+}
+
+.follow_buttonsNoHover {
+  cursor: not-allowed;
+
+  & button {
+    cursor: not-allowed;
+  }
+  &:hover {
+    background-color: $brandclr-highlight;
+    box-shadow: none;
+    &:hover > button {
+      color: $brand-clr;
+    }
+  }
+}
+.tooltip {
+  position: relative; /* Ensure tooltip is positioned relative to its container */
+  display: inline-block; /* Display tooltip inline with the badges */
+}
+
+.tooltiptext,
+.tooltiptextBadge {
+  width: 22rem;
+  height: auto;
+  font-size: 1.3rem;
+  font-weight: 500;
+  background-color: $white; /* Use a color or variable as needed */
+  border: 2px solid $brandclr-highlight; /* Use a color or variable as needed */
+  color: #000000; /* Use a color or variable as needed */
+  text-align: center;
+  border-radius: 1rem;
+  padding: 0.8rem 1rem; /* Adjust padding as needed */
+  position: absolute;
+  z-index: 99;
+  bottom: 105%; /* Position the tooltip above the badge */
+  left: 50%;
+  transform: translateX(-50%); /* Center the tooltip horizontally */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Smooth appearance */
+  // white-space: pre-wrap;
+  // word-wrap: break-word;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  line-height: 1.7rem;
+  display: none;
+}
+.tooltiptextBadge {
+  width: 25rem;
+  bottom: 95%; /* Position the tooltip above the badge */
+  & span {
+    color: $prime_highlight;
+    font-weight: 600;
+  }
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+.tooltip:hover .tooltiptextBadge {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.strangerMobCover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stranger,
+.strangerMob {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+
+  .follow_button {
+    // background-color: $brandclr_highlight;
+    display: grid;
+    place-items: center;
+    border-radius: 0.5rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out 0.1s;
+    width: auto;
+    padding: 1rem 2rem;
+
+    // .follow1 {
+    //   width: 2.4rem;
+    //   height: 2.4rem;
+    //   transition: all 0.5s;
+    //   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    //   fill: $brand-clr;
+    //   // stroke-width: .3rem;
+    //   // stroke: black;
+    // }
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  .followed_button {
+    background-color: $brand-clr;
+  }
+}
+
+.message_buttonDisabled {
+  background-color: $brandclr_highlight;
+  width: 7.5rem;
+  height: 3.8rem;
+  display: grid;
+  place-items: center;
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  cursor: default;
+  transition: all 0.5s ease-in-out 0.1s;
+
+  .message_buttonDisabledIcon {
+    width: 2.2rem;
+    height: 2.2rem;
+    transition: all 0.5s;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.buttonWithImage {
+  display: grid;
+  place-items: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.badges {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.8rem;
+
+  .award_svg {
+    width: 2rem;
+
+    & > svg {
+      fill: $brand-clr;
+    }
+  }
+
+  & > p {
+    font-size: 1.6rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.2rem;
+    background-color: $background;
+    top: 0;
+    margin-left: 0rem;
+  }
+}
+
+.badgeCoverIconLock {
+  position: absolute;
+  top: 1;
+  left: 1;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $gray_highlight;
+  color: $white;
+  opacity: 1;
+}
+
+.awards {
+  margin: 1rem 0rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.8rem;
+  height: auto;
+  padding: 0rem 1rem;
+  & .badgeCover1 {
+    margin-top: 1rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $gray_highlight;
+    margin-right: 0.8rem;
+  }
+  & .badgeCover {
+    // margin-top: 2rem;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $border;
+    background-color: $white;
+    & .badgeCoverIcon {
+      width: 3.5rem;
+      height: 3.5rem;
+      color: $gray_highlight;
+    }
+  }
+}
+
+// {/* third card upper part */}
+.status_cover {
+  // margin-top: -2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  // grid-column: 1/ 2;
+  // grid-row: 2/ 3;
+  align-items: center;
+  border-radius: 0rem 0rem 1.6rem 1.6rem;
+  // box-shadow: rgba(100, 100, 111, 0.2) 0px 4px 12px 0px;
+
+  & .status_icons_cover {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+
+    & .status_icons {
+      width: 4rem;
+      height: 4rem;
+      position: relative;
+    }
+  }
+
+  // college name and etc
+  & .highlights {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem;
+    width: 95%;
+    & .pic {
+      height: 4rem;
+      width: 4rem;
+    }
+
+    & > p {
+      position: relative;
+      font-size: 1.5rem;
+      margin-left: 0.5rem;
+      width: 100%;
+      line-break: auto;
+      word-wrap: break-word;
+    }
+  }
+}
+
+// {/* third card lower part */}
+.skill_main {
+  background-color: $background1;
+  border-radius: 0rem 0rem 1.6rem 1.6rem;
+  padding: 0rem 2rem 1.1rem;
+  grid-column: 3/ 4;
+  grid-row: 2/ 3;
+  max-height: 18rem;
+  overflow: auto;
+  border-top: 2px solid $white;
+
+  // Custom scrollbar styles
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray_highlight; // Adjust this color as needed
+    border-radius: 0rem 1rem 1rem 0rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-content; // Adjust this color as needed
+    border-radius: 0rem 1rem 1rem 0rem;
+    border: 2px solid $white; // Adjust this color as needed
+  }
+
+  & .skills {
+    padding: 0.5rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: $background1; // Ensure the background color covers the content behind it
+    z-index: 1; // Ensure it stays on top
+    border-bottom: 2px solid $background;
+
+    & > p {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $gray-content;
+      margin: 0rem;
+    }
+  }
+
+  & thead {
+    position: sticky;
+    top: 4.5rem; // Adjust the top value based on your sticky skills section height
+    z-index: 1; // Ensure it stays on top
+    background-color: $background1;
+  }
+
+  & table {
+    border-collapse: collapse;
+    width: 100%;
+
+    & th {
+      font-weight: 400;
+      font-size: 1.7rem;
+      color: $gray-content;
+      text-align: center;
+      padding: 1rem 0rem;
+    }
+
+    & td {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 410;
+      color: $black;
+      padding: 0.5rem 0.8rem;
+    }
+
+    & tbody:nth-child(even) {
+      background: $brandclr_highlight;
+    }
+  }
+}
+.SkillsNotAvail,
+.SkillsNotAvailStranger {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $white;
+  border-radius: 1.6rem;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  color: $subtitle;
+  cursor: pointer;
+  line-height: 2.3rem;
+  transition: all 0.3s ease-in;
+  &:hover {
+    border: 2px solid $textSoft2;
+    color: $brand-clr;
+  }
+}
+.SkillsNotAvailStranger {
+  &:hover {
+    border: 2px solid $white;
+    color: $subtitle;
+  }
+}
+.usersSkills {
+  display: inline-block;
+  margin: 1rem 0.5rem 0rem 0rem;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border: 2px solid $background;
+  border-radius: 1.5rem;
+}
+.skillsEditIcon {
+  cursor: pointer;
+  position: relative;
+  .UnfinishedDot {
+    position: absolute;
+    top: 0;
+    left: 1.8rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: red;
+  }
+  & > .skillsEdit {
+    width: 2rem;
+    height: 2rem;
+    color: $gray-content;
+  }
+}
+
+//stories
+.story_cover {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 4rem;
+
+  & .storie_middle {
+    width: 115rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.stories {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 12.5rem;
+  margin-right: 3.6rem;
+
+  & .stories_round {
+    width: 9.5rem;
+    height: 9.5rem;
+    border-radius: 100%;
+    outline: 0.2rem dashed $gray-content;
+    overflow: hidden;
+  }
+
+  & .story1_name {
+    font-size: 1.8rem;
+  }
+}
+
+// tabs css start
+.disable-bg-color {
+  background-color: transparent !important;
+}
+.profileTabBig {
+  width: 95.1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.6rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 12px 0px;
+}
+.profile_tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.8rem;
+  width: 100vw;
+  position: sticky;
+  top: 6.5rem;
+  z-index: 99;
+
+  & .tab_center {
+    background-color: $white;
+    width: 115rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    // flex-wrap: nowrap;
+    position: relative;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    border-radius: 1.6rem;
+    &.dragging {
+      scroll-behavior: smooth;
+      cursor: grab;
+    }
+    &.dragging input:checked + label {
+      user-select: none;
+      pointer-events: none;
+    }
+  }
+  //new code for slider
+
+  .tab_center::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab_center input[type="radio"] {
+    display: none;
+  }
+
+  .tab_center input:checked + #labelMe {
+    color: $white;
+  }
+
+  #labelMe {
+    display: block;
+    color: $gray-content;
+    height: 5rem;
+    width: 16.666%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+  }
+
+  .gliderME {
+    position: absolute;
+    // top: 0.5rem;
+    // left: .5rem;
+    background: $brand-clr;
+    width: 16.66%;
+    height: 5rem;
+    border-radius: 5rem;
+    transition: transform 0.3s ease;
+  }
+
+  input[id="tab1"]:checked ~ .gliderME {
+    transform: translateX(0%);
+  }
+
+  input[id="tab2"]:checked ~ .gliderME {
+    transform: translateX(99%);
+  }
+
+  input[id="tab3"]:checked ~ .gliderME {
+    transform: translateX(198%);
+  }
+
+  input[id="tab4"]:checked ~ .gliderME {
+    transform: translateX(297%);
+  }
+
+  input[id="tab5"]:checked ~ .gliderME {
+    transform: translateX(396%);
+  }
+
+  input[id="tab6"]:checked ~ .gliderME {
+    transform: translateX(495%);
+  }
+
+  // this css code for stranger profile
+
+  .tab_center input:checked + #labelProfile {
+    color: $white;
+  }
+
+  #labelProfile {
+    display: block;
+    color: $gray-content;
+    height: 5rem;
+    width: 16.666%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+  }
+  & .gliderProfile {
+    position: absolute;
+    // top: 0.5rem;
+    // left: .5rem;
+    background: $brand-clr;
+    width: 16.5%;
+    height: 5rem;
+    border-radius: 5rem;
+    transition: transform 0.3s ease;
+  }
+
+  input[id="tab1"]:checked ~ .gliderProfile {
+    transform: translateX(-200%);
+  }
+
+  input[id="tab2"]:checked ~ .gliderProfile {
+    transform: translateX(-100%);
+  }
+
+  input[id="tab3"]:checked ~ .gliderProfile {
+    transform: translateX(-0%);
+  }
+
+  input[id="tab4"]:checked ~ .gliderProfile {
+    transform: translateX(100%);
+  }
+
+  input[id="tab5"]:checked ~ .gliderProfile {
+    transform: translateX(200%);
+  }
+}
+
+// cards css start
+.acchieventes {
+  width: 100vw;
+  padding: 1.8rem 0rem 8rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.acchieve_center {
+  width: 95.1vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  place-items: center;
+}
+
+.acchieve_centerAbout {
+  display: grid;
+  grid-template-columns: 115rem;
+  gap: 1rem;
+  place-items: center;
+}
+
+.cards {
+  background-color: rgb(27, 25, 24);
+  position: relative;
+  width: 100%;
+  height: 33rem;
+  border-radius: 1.6rem;
+  transition: all 0.5s ease;
+  // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  overflow: hidden;
+  border: 1px solid $textSoft2;
+
+  & .profile_gallery_img {
+    //   width: 100%;
+    // height: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  &:hover {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    cursor: pointer;
+  }
+}
+.multiple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: black;
+  border-radius: 50%;
+  opacity: 0.6;
+  & .multipleSvg {
+    height: 70%;
+    width: 70%;
+    color: $white;
+  }
+}
+
+.hover_icons {
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 0;
+  width: 100%;
+  height: 11.3rem;
+  background-color: $black;
+  opacity: 0.5;
+  z-index: 1;
+  transition: transform 0.5s ease;
+  transform: scale(0.9);
+
+  & .hover_icons_cover {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.cards:hover .profile_gallery_img {
+  filter: brightness(70%);
+  transform: scale(1.05);
+}
+
+.cards:hover > .hover_icons {
+  transform: scale(1);
+  visibility: visible;
+}
+
+.hoverPostIconsCover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > p {
+    color: $white;
+    font-size: 1.8rem;
+    opacity: 1;
+    margin-left: 0.3rem;
+  }
+}
+
+.hoverPostIcons {
+  width: 3rem;
+  height: 3rem;
+}
+
+.PostReactIcons {
+  width: 100%;
+  height: 100%;
+  color: $white;
+}
+
+@media (min-width: 1367px) {
+  .main_profile {
+    & .profile_header {
+      width: 130rem;
+      grid-template-columns: 27.5rem 71.2rem 27.5rem;
+    }
+  }
+  .profileTabBig {
+    width: 130rem;
+  }
+  .acchieve_center {
+    width: 130rem;
+  }
+}
+
+@media (max-width: 970px) {
+  .main_profile {
+    //   {/* for center the things */}
+    & .profile_header {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto auto auto auto;
+      width: 98vw;
+      margin-top: 1rem;
+      justify-content: center;
+      gap: 0rem;
+    }
+  }
+
+  .firstCard {
+    grid-column: 1 / 2;
+    grid-row: 2/ 4;
+    border-radius: 0;
+    & .profile_pic {
+      margin-top: -8rem;
+    }
+    & .profile_name {
+      & .title {
+        font-size: 1.6rem;
+      }
+      & .titleP {
+        font-size: 1.6rem;
+      }
+      & > h3 {
+        font-size: 2rem;
+      }
+    }
+  }
+  .follow {
+    font-size: 1.8rem;
+  }
+
+  .centerUpperImage {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .centerImageCover {
+    height: 22rem;
+  }
+  .secondCard_upper {
+    grid-column: 1/ 3;
+    grid-row: 4/ 5;
+    background: $background1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 1.6rem 1.6rem;
+    padding: 1rem;
+    border: none;
+
+    & .name_icon {
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 0rem 0rem 1rem;
+    }
+  }
+
+  #nameP {
+    font-size: 2rem;
+    color: $subtitle;
+  }
+
+  .highlights_first_tablet {
+    display: flex;
+  }
+
+  .profile_bio,
+  .bio_button {
+    border: 1px solid $textSoft2;
+    border-radius: 1.6rem;
+  }
+
+  // .status_cover {
+  //   margin-top: 1rem;
+  //   // grid-column: 2 / 3;
+  //   // grid-row: 4/ 5;
+  //   height: auto;
+  //   justify-content: flex-start;
+  //   padding: 0rem;
+  //   background: $white;
+  //   border-radius: 1.6rem;
+  //   margin-right: 0.5rem;
+  //   box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 12px 0px;
+
+  //   & .status_icons {
+  //     padding: 1rem;
+  //   }
+
+  //   // college name and etc
+  //   & .highlights {
+  //     display: none;
+  //   }
+  // }
+
+  .profile_info {
+    padding: 1rem 2rem 0rem;
+
+    & .prof_achivements {
+      & .prof_achivements_cover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > p {
+          font-weight: 500;
+          color: $brand-clr;
+        }
+      }
+    }
+  }
+
+  .user_bio {
+    overflow-y: auto;
+    width: 100%;
+    height: auto;
+    max-height: 10rem;
+    color: $gray-content;
+    font-size: 1.7rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .profile_bio_tablet,
+  .bio_button_tablet {
+    display: flex;
+  }
+
+  .bio_button_tablet {
+    margin: 1rem 0rem;
+  }
+  .stranger {
+    display: none;
+  }
+
+  .strangerMob {
+    display: flex;
+    width: 100%;
+  }
+  .rank {
+    padding-top: 1rem;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    border-radius: 0rem;
+    border-top: none;
+    border-bottom: 2px solid $white;
+
+    & .rank_levelCover {
+      & .rank_level {
+        & .ranknumber {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          & > .rankScore {
+            margin-right: 0.8rem;
+            margin-bottom: 0rem;
+          }
+
+          & > p {
+            font-size: 1.8rem;
+          }
+        }
+
+        // &::before {
+        //   height: 2.5rem;
+        //   top: 1rem;
+        // }
+      }
+    }
+  }
+
+  .badges {
+    &::before {
+      width: 95%;
+      // left: 1rem;
+    }
+  }
+
+  .skill_main {
+    grid-column: 2 / 3;
+    grid-row: 3/ 4;
+    border-radius: 0rem;
+    border-bottom: 2px solid $white;
+    max-height: 15rem;
+  }
+
+  .story_cover {
+    width: 100vw;
+
+    & .storie_middle {
+      width: 98vw;
+    }
+  }
+
+  // / tabs css start
+  .profileTabBig {
+    width: 98vw;
+  }
+  .profile_tab {
+    margin-top: 2rem;
+
+    & .tab_center {
+      width: 100vw;
+    }
+
+    #labelMe,
+    #labelProfile {
+      height: 4.5rem;
+      font-size: 1.4rem;
+    }
+    .gliderME {
+      width: 16.6%;
+      height: 4.5rem;
+    }
+    .gliderProfile {
+      height: 4.5rem;
+    }
+  }
+
+  // cards css start
+  .acchieventes {
+    width: 100vw;
+    padding: 1rem 0rem 8rem 0rem;
+  }
+  .acchieve_center {
+    width: 98vw;
+    gap: 1rem;
+  }
+
+  .acchieve_centerAbout {
+    grid-template-columns: 98vw;
+  }
+
+  .cards {
+    width: 100%;
+    height: 28rem;
+  }
+
+  .hover_icons {
+    visibility: hidden;
+    display: flex;
+  }
+
+  .cards:hover .profile_gallery_img {
+    filter: none;
+    transform: none;
+  }
+
+  .cards:hover > .hover_icons {
+    transform: none;
+    visibility: hidden;
+  }
+
+  .tooltiptextBadge {
+    max-width: 22vw;
+    left: 10%;
+  }
+}
+
+@media (max-width: 767px) {
+  .SkillsNotAvail,
+  .SkillsNotAvailStranger {
+    border: 1px solid $textSoft2;
+  }
+  .SkillsNotAvailStranger {
+    &:hover {
+      border: 1px solid $textSoft2;
+      color: $subtitle;
+    }
+  }
+  .multiple {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  .main_profile {
+    //   {/* for center the things */}
+    & .profile_header {
+      grid-template-columns: 80vw;
+      grid-template-rows: repeat(5, auto);
+      height: auto;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+  .centerUpperImage {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .centerImageCover {
+    border-radius: 1.6rem 1.6rem 0rem 0rem;
+    height: 15rem;
+  }
+  .firstCard {
+    grid-column: 1 / 2;
+    grid-row: 2/ 3;
+    padding: 2rem 0rem;
+    border-radius: 0rem 0rem 1.6rem 1.6rem;
+    margin-right: 0rem;
+    border-top: none;
+    border: 1px solid $textSoft2;
+    box-shadow: none;
+  }
+
+  .secondCard_upper {
+    grid-column: 1 / 2;
+    grid-row: 5/ 6;
+    margin-left: 0rem;
+    border-radius: 1.6rem;
+    margin-bottom: 0.2rem;
+    padding: 1rem;
+    background: $white;
+    border: 1px solid $textSoft2;
+  }
+
+  // edit and settings icons
+  .settingsIcon {
+    // display: none;
+  }
+
+  // .status_cover {
+  //   margin-top: 0.5rem;
+  //   grid-column: 1/2;
+  //   grid-row: 5/ 6;
+  //   margin-right: 0rem;
+  //   background: $background;
+  //   border: 1px solid $textSoft2;
+  //   box-shadow: none;
+
+  //   // college name and etc
+  //   & .highlights {
+  //     display: none;
+  //   }
+  // }
+  .profile_bio_tablet {
+    padding: 2rem 1rem;
+  }
+  .profile_info {
+    & .prof_achivements {
+      margin: auto;
+      justify-content: center;
+      width: 20rem;
+    }
+  }
+
+  .rank {
+    grid-column: 1 / 2;
+    grid-row: 3/ 4;
+    // min-height: 18rem;
+    border-radius: 1.6rem;
+    margin-left: 0rem;
+    background: $background;
+    border: 1px solid $textSoft2;
+  }
+
+  .badges {
+    &::before {
+      width: 93%;
+      background: $textSoft;
+      // left: 2rem;
+    }
+  }
+
+  .awards {
+    margin: 2rem 0rem;
+
+    & .badgeCover1 {
+      margin-top: 0rem;
+      margin-right: 2rem;
+    }
+  }
+
+  .skill_main {
+    grid-column: 1 / 2;
+    grid-row: 4/ 5;
+    margin-left: 0rem;
+    max-height: 25rem;
+    border-radius: 1.6rem;
+    background: $background;
+    border: 1px solid $textSoft2;
+    padding: 0rem 1.1rem 1.1rem;
+
+    & .skills {
+      background-color: $background; // Ensure the background color covers the content behind it
+      border-bottom: 2px solid $textSoft;
+    }
+  }
+  .usersSkills {
+    border: 2px solid $textSoft2;
+  }
+  .story_cover {
+    width: 100vw;
+
+    & .storie_middle {
+      width: 80vw;
+    }
+  }
+  .profileTabBig {
+    width: 80vw;
+  }
+  .profile_tab {
+    margin-top: 1rem;
+
+    & .tab_center {
+      border-radius: 1.6rem;
+      width: 100vw;
+    }
+
+    #labelProfile,
+    #labelMe {
+      flex-shrink: 0;
+      margin: 0rem 0.5rem;
+      border-radius: 1rem;
+      background: $background;
+      width: 25%;
+    }
+    .gliderME,
+    .gliderProfile {
+      width: 24.5%;
+      border-radius: 1rem;
+    }
+
+    input[id="tab1"]:checked ~ .gliderME {
+      transform: translateX(4%);
+    }
+
+    input[id="tab2"]:checked ~ .gliderME {
+      transform: translateX(112%);
+    }
+
+    input[id="tab3"]:checked ~ .gliderME {
+      transform: translateX(220%);
+    }
+
+    input[id="tab4"]:checked ~ .gliderME {
+      transform: translateX(328%);
+    }
+
+    input[id="tab5"]:checked ~ .gliderME {
+      transform: translateX(435%);
+    }
+
+    input[id="tab6"]:checked ~ .gliderME {
+      transform: translateX(544%);
+    }
+
+    //.content_center wala input
+    input[id="tab1"]:checked ~ .gliderProfile {
+      transform: translateX(4%);
+    }
+
+    input[id="tab2"]:checked ~ .gliderProfile {
+      transform: translateX(112%);
+    }
+
+    input[id="tab3"]:checked ~ .gliderProfile {
+      transform: translateX(218%);
+    }
+
+    input[id="tab4"]:checked ~ .gliderProfile {
+      transform: translateX(326%);
+    }
+
+    input[id="tab5"]:checked ~ .gliderProfile {
+      transform: translateX(434%);
+    }
+  }
+
+  // cards css start
+  .acchieve_center {
+    width: 80vw;
+    gap: 0.5rem;
+  }
+
+  .acchieve_centerAbout {
+    grid-template-columns: 80vw;
+  }
+
+  .cards {
+    // width: 26vw;
+    height: 20rem;
+  }
+
+  .hover_icons {
+    visibility: hidden;
+    display: flex;
+  }
+
+  .cards:hover .profile_gallery_img {
+    filter: none;
+    transform: none;
+  }
+
+  .cards:hover > .hover_icons {
+    transform: none;
+    visibility: hidden;
+  }
+
+  #mobile_viewTab {
+    display: none;
+  }
+
+  .acchieventes {
+    padding: 0.5rem 0rem 6.5rem;
+  }
+  .tooltiptextBadge {
+    max-width: 80vw;
+    bottom: 105%; /* Position the tooltip above the badge */
+    left: 50%;
+  }
+}
+
+@media (max-width: 591px) {
+  .main_profile {
+    //   {/* for center the things */}
+    & .profile_header {
+      grid-template-columns: 97vw;
+    }
+  }
+  .centerImageCover {
+    height: 10rem;
+  }
+  .follow {
+    width: 90vw;
+  }
+  .rank {
+    padding-top: 0rem;
+  }
+  .story_cover {
+    margin-top: 2rem;
+  }
+
+  .stories {
+    height: 9rem;
+    margin-right: 1rem;
+
+    & .stories_round {
+      width: 6.5rem;
+      height: 6.5rem;
+    }
+
+    & .story1_name {
+      font-size: 1.4rem;
+    }
+  }
+  .profileTabBig {
+    width: 97vw;
+  }
+  .profile_tab {
+    width: 100vw;
+
+    & .tab_center {
+      width: 100vw;
+    }
+
+    #labelMe,
+    #labelProfile {
+      width: 12rem;
+    }
+    .gliderME,
+    .gliderProfile {
+      width: 12rem;
+    }
+
+    input[id="tab2"]:checked ~ .gliderME,
+    input[id="tab2"]:checked ~ .gliderProfile {
+      transform: translateX(112%);
+    }
+
+    input[id="tab3"]:checked ~ .gliderME,
+    input[id="tab3"]:checked ~ .gliderProfile {
+      transform: translateX(220%);
+    }
+
+    input[id="tab4"]:checked ~ .gliderME,
+    input[id="tab4"]:checked ~ .gliderProfile {
+      transform: translateX(329%);
+    }
+
+    input[id="tab5"]:checked ~ .gliderME,
+    input[id="tab5"]:checked ~ .gliderProfile {
+      transform: translateX(438%);
+    }
+
+    input[id="tab6"]:checked ~ .gliderME {
+      transform: translateX(546%);
+    }
+  }
+
+  .acchieve_center {
+    gap: 0.5rem;
+    width: 98vw;
+  }
+
+  .acchieve_centerAbout {
+    grid-template-columns: 98vw;
+  }
+
+  .cards {
+    width: 32vw;
+    height: 15rem;
+  }
+
+  .story_cover {
+    width: 100vw;
+
+    & .storie_middle {
+      width: 98vw;
+    }
+  }
+
+  .firstCard {
+    & .profile_name {
+      & .title {
+        font-size: 1.5rem;
+      }
+      & .titleP {
+        font-size: 1.5rem;
+      }
+      & > h3 {
+        font-size: 2rem;
+      }
+    }
+  }
+  .follow {
+    font-size: 1.6rem;
+  }
+
+  .badges {
+    &::before {
+      width: 92%;
+    }
+  }
+  .awards {
+    & .badgeCover1 {
+      width: 7rem;
+      height: 7rem;
+    }
+    & .badgeCover {
+      width: 6rem;
+      height: 6rem;
+      & .badgeCoverIcon {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+    }
+  }
+  .profile_info {
+    padding: 0rem;
+
+    & .prof_achivements {
+      width: auto;
+
+      & .prof_achivements_cover {
+        & .prof_achivementsP {
+          margin-right: 0.3rem;
+        }
+      }
+    }
+  }
+  .tooltiptextBadge {
+    max-width: 30vw;
+    // left: 80%;
+  }
+  .tooltiptext {
+    max-width: 60vw;
+    left: 20%;
+  }
+}
+
+@media (max-width: 375px) {
+  .awards {
+    & .badgeCover1 {
+      margin-right: 0.8rem;
+    }
+  }
+  .tooltiptextBadge {
+    display: none;
+  }
+  .centerImageCover {
+    height: 9rem;
+  }
+}
+@media (max-width: 320px) {
+  .secondCard_upper {
+    padding: 0.5rem 1rem;
+
+    & .name_icon {
+      padding: 0rem 0rem 0.5rem;
+    }
+  }
+
+  .firstCard {
+    padding: 1rem 0rem;
+  }
+
+  .highlights_first_tablet {
+    & .highlights {
+      margin: 0.5rem 0rem 1rem 1.5rem;
+    }
+  }
+
+  .badges {
+    &::before {
+      width: 94%;
+    }
+  }
+  .badgeCoverIconLock {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .awards {
+    & .badgeCover1 {
+      width: 5rem;
+      height: 5rem;
+      margin-right: 0.8rem;
+    }
+    & .badgeCover {
+      width: 4rem;
+      height: 4rem;
+      & .badgeCoverIcon {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
+
+  .skill_main {
+    padding: 0rem 1rem 1.1rem;
+  }
+
+  // .status_cover {
+  //   padding: 0;
+  // }
+
+  .user_bio {
+    font-size: 1.6rem;
+  }
+
+  .rank {
+    & div {
+      & .rank_level {
+        & .ranknumber {
+          margin: 1rem 0rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 280px) {
+  .profile_info {
+    flex-direction: column;
+
+    & .prof_achivements {
+      & .prof_achivements_cover {
+        & .prof_achivementsP {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .user_bio {
+    // Custom scrollbar styles
+    &::-webkit-scrollbar {
+      width: 0.8rem;
+    }
+  }
+  .skill_main {
+    // Custom scrollbar styles
+    &::-webkit-scrollbar {
+      width: 0.8rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $gray_highlight; // Adjust this color as needed
+      border-radius: 0rem 1rem 1rem 0rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray-content; // Adjust this color as needed
+      border-radius: 0rem 1rem 1rem 0rem;
+      border: 2px solid $white; // Adjust this color as needed
+    }
+  }
+  .follow {
+    flex-wrap: wrap;
+    gap:1rem;
+    &::before {
+      content: "";
+      width: 0.2rem;
+      height: 2.3rem;
+      background-color: $background;
+      position: absolute;
+      top: 0;
+      // right: 0rem;
+      display: none;
+    }
+  }
+}

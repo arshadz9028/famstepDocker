@@ -1,0 +1,1047 @@
+/* navbar style start  */
+@import "./sass/_variable.scss";
+
+//  {/* navbar */}
+.mobile_navbar {
+  display: none;
+}
+
+// adding button
+.closeButton {
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.18rem solid $gray_highlight;
+  position: sticky;
+  top: 0;
+  background: $white;
+  z-index: 999;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+
+.leftArrowButton {
+  width: 3.5rem;
+  height: 3.5rem;
+  fill: $subtitle;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.upper_sec {
+  color: $brand_clr;
+  font-size: 1.8rem;
+  width: 90%;
+  text-align: center;
+  margin-right: 3rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  width: 100vw;
+  background: $white;
+  list-style-type: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 25px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  // border-bottom: 1px solid $textSoft;
+}
+
+//  {/* navbar center */}
+.navbar_section {
+  display: flex;
+  justify-content: space-between;
+  width: 95.1vw;
+  height: 100%;
+  align-items: center;
+}
+
+// {/* logo and search input */}
+.logo_search {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  width: 53.2rem;
+
+  // {/* logo control */}
+  & .logo_image {
+    // margin-right: 2rem;
+    // height: auto;
+
+    & svg {
+      width: 14rem;
+      height: 100%;
+      margin: 0rem 1rem 0rem 0rem;
+    }
+  }
+}
+
+.search {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  // {/* search control */}
+  & input {
+    width: 80%;
+    background: $background1;
+    color: $black;
+    border-radius: 3rem;
+    font-size: 1.6rem;
+    padding: 0.8rem 3.4rem;
+    transition: all 0.4s ease-in-out;
+
+    &::placeholder {
+      color: $gray_content;
+    }
+
+    &:focus {
+      border: 1px solid $brand_clr;
+      outline: none;
+    }
+  }
+}
+.searchError {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  font-size: 1.6rem;
+  color: $gray-content;
+}
+
+#search_input {
+  padding: 0.8rem 1.4rem;
+  width: 39.8rem;
+  border-radius: 0px;
+  z-index: 9999;
+  background: white;
+}
+
+//  {/* search icon */}
+.search_icon {
+  position: absolute;
+  padding-left: 1.4rem;
+  & .search_svg {
+    width: 1.6rem;
+    height: 100%;
+    fill: none;
+    stroke: $gray-content;
+    stroke-width: 0.25rem;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+//  {/* search result modal */}
+.search_modal {
+  position: absolute;
+  top: 4rem;
+  left: -0.1rem;
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  height: 38rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: $white;
+  border-radius: 1.6rem;
+  cursor: pointer;
+  padding: 1rem;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+  transition: all 0.5s ease-in-out;
+  // Custom scrollbar styles
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray_highlight; // Adjust this color as needed
+    border-radius: 0rem 1.6rem 1.6rem 0rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $white; // Adjust this color as needed
+    border-radius: 0rem 1.6rem 1.6rem 0rem;
+    border: 2px solid $gray_highlight; // Adjust this color as needed
+  }
+  & .modal_arr {
+    padding: 0.2rem 0rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &:hover {
+      background-color: $brandclr-highlight;
+      border-radius: 1.6rem;
+    }
+
+    & .dp_detail {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+
+      & .search_dp {
+        position: relative;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 5rem;
+        overflow: hidden;
+        margin-right: 0.6rem;
+        outline: 2px solid $brandclr-highlight;
+
+      }
+
+      & .text_btn {
+        height: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+
+        & .search_name {
+          display: flex;
+          align-items: center;
+          font-size: 1.6rem;
+          font-weight: 400;
+          color: $black;
+        }
+
+        & .search_id {
+          display: flex;
+          font-size: 1.3rem;
+          color: $gray_content;
+        }
+      }
+    }
+
+    & .clsBtn {
+      width: 2.9rem;
+      height: 2.9rem;
+      margin-right: 0.2rem;
+      background-color: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      position: absolute;
+      right: 0.5rem;
+
+      & .close {
+        fill: none;
+        stroke: $black;
+        stroke-width: 0.15rem;
+        transition: all 0.3s ease-in-out;
+        padding: 0.5rem;
+      }
+
+      &:hover {
+        transform: rotate(90deg) scale(1.2);
+      }
+
+      &:hover .close {
+        stroke: red;
+        stroke-width: 0.14rem;
+      }
+    }
+  }
+}
+
+//  {/* navbar icons section  */}
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  // width: 45rem;
+  width: auto;
+  height: 100%;
+}
+
+.nav_icons {
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(0.8rem);
+  width: 6.5rem;
+  height: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  & .home_svg {
+    width: 2.8rem;
+    height: 2.8rem;
+    fill: none;
+    stroke: $subtitle;
+    stroke-width: 0.14rem;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .home_svg_add {
+    width: 4.5rem;
+    height: 4.5rem;
+    fill: none;
+    stroke: $subtitle;
+    stroke-width: 0.1rem;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover .home_svg {
+    stroke: $brand-clr;
+  }
+
+  & .menu_name {
+    font-weight: 500;
+    color: $brand-clr;
+    font-size: 1.2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover {
+    transform: translateY(0rem);
+  }
+
+  &:hover .menu_name {
+    // transform: translateY(-.7rem);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+//message notification
+.net_notification_dot {
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: rgba(255, 0, 0, 1);
+  border-radius: 50%;
+  position: absolute;
+  top: 0.05rem;
+  right: 2rem;
+  z-index: 999;
+}
+.net_notification_dot1 {
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: rgba(255, 0, 0, 1);
+  border-radius: 50%;
+  position: absolute;
+  top: 0.05rem;
+  right: 1.4rem;
+  z-index: 999;
+}
+.collab_notification_dot {
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: rgba(255, 0, 0, 1);
+  border-radius: 50%;
+  position: absolute;
+  top: 0.05rem;
+  right: 1.4rem;
+  z-index: 999;
+}
+
+.message_dot {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: rgba(255, 0, 0, 1);
+  border-radius: 50%;
+  position: absolute;
+  top: -0.5rem;
+  right: 1rem;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: $white;
+}
+
+// notification for null
+
+.null_designCenter {
+  width: 100%;
+  height: calc(100% - 6rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & .null_circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+}
+.notification_design1 {
+  border: 3px solid $background;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 25rem;
+  position: relative;
+}
+.notification_design2 {
+  border: 2px solid $background;
+  width: 17rem;
+  height: 17rem;
+  border-radius: 17rem;
+  position: absolute;
+}
+.notification_design3 {
+  border: 8px solid $background;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 9rem;
+  position: absolute;
+}
+.notification_design4 {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+}
+
+.null_text {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 500;
+  width: 80%;
+}
+.head {
+  margin-bottom: 1rem;
+  color: $black;
+}
+.subtitle {
+  color: $gray-content;
+  line-height: 2.2rem;
+}
+// notification modal
+.notification_modal {
+  position: absolute;
+  top: 3.5rem;
+  left: -40rem;
+  width: 46rem;
+  height: 55rem;
+  background-color: $white;
+  border-radius: 1.6rem;
+  transition: all 0.5s ease-in-out;
+  z-index: 999;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray_highlight;
+    border-radius: 0rem 1.6rem 1.6rem 0rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $white;
+    border-radius: 0rem 1.6rem 1.6rem 0rem;
+    border: 2px solid $gray_highlight;
+  }
+}
+
+.notificationContent {
+  padding: 0rem 1rem;
+}
+
+.notification_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 0.1px solid $background;
+
+  &:hover {
+    background-color: $brandclr-highlight;
+    border-radius: 1.6rem;
+  }
+}
+
+.notification_icon {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5rem;
+  overflow: hidden;
+  margin-right: 1rem;
+  outline: 1px solid $brandclr-highlight;
+}
+
+.notification_content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 85%;
+
+  & .notification_text {
+    // font-size: 1.4rem;
+    // position: fixed;
+
+    & > p {
+      font-size: 1.5rem;
+
+      & .blue {
+        font-weight: 500;
+        color: $brand_clr;
+        font-size: 1.5rem;
+      }
+
+      & .time {
+        display: block;
+      }
+    }
+  }
+}
+
+.action_buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // width: fit-content;
+
+  & button {
+    width: 9rem;
+    height: 3.6rem;
+    // padding-top: 0.7rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $brandclr-highlight;
+    border-radius: 1.5rem;
+    color: $black;
+    font-size: 1.7rem;
+    font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px 0px,
+      rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+      rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid $brandclr-highlight;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out 0.1s;
+    margin-top: 0.51rem;
+
+    &:hover {
+      background: $brand-clr;
+      color: $white;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+  }
+}
+
+// more option in profile
+.proficon_upper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  // margin-left: 1.5rem;
+  width: 6.5rem;
+  height: 4.5rem;
+
+  & .prof_icon {
+    position: relative;
+    width: 3.9rem;
+    height: 3.9rem;
+    border-radius: 4rem;
+    overflow: hidden;
+    cursor: pointer;
+    background: $white;
+    outline: 2px solid $brandclr-highlight;
+  }
+}
+.UnfinishedDot {
+  position: absolute;
+  top: 0.2rem;
+  right: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: red;
+  z-index: 9999;
+}
+.UnfinishedDot1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: red;
+  z-index: 9999;
+}
+.circle_cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .me_circle {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 4.8rem;
+    background-color: transparent;
+    border: 2px solid $brand-clr;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+// {/* Meprof modal */}
+.mypic {
+  z-index: 99;
+  height: auto;
+  width: 26rem;
+  position: absolute;
+  top: 5rem;
+  right: 0rem;
+  border-radius: 1.6rem;
+  background: $white;
+  padding: 1rem;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+}
+
+.icons_name {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  color: $black;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 1.6rem;
+
+  &:nth-child(1) {
+    border-bottom: 1px solid $background;
+  }
+
+  & .icons {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    position: relative;
+
+    & .profIcon {
+      fill: none;
+      stroke: $black;
+      stroke-width: 0.15rem;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  & .name {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  &:hover {
+    background: $brandclr-highlight;
+    color: $brand-clr;
+    border-radius: 1.6rem;
+  }
+
+  &:hover .profIcon {
+    stroke: $brand-clr;
+  }
+}
+
+// isme kaam karna baaki hai modal ke animation ke liye chahiye
+.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: all 0.4s ease-in-out;
+}
+
+.inactive {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: all 0.4s ease-in-out;
+}
+.boxesIcons {
+  width: auto;
+  height: 3.5rem;
+}
+.boxesImage {
+  width: 100%;
+  height: 100%;
+}
+.option_name {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+.dividerVertical {
+  width: 0.2rem;
+  height: 3rem;
+  background-color: $background;
+  margin: auto;
+  transition: all 0.8s;
+  position: absolute;
+  right: 50%;
+}
+@media (min-width: 1367px){
+  .navbar_section {
+    width: 130rem;
+  }
+}
+@media (max-width: 970px) {
+  .navbar_section {
+    width: 98vw;
+  }
+
+  .search {
+    & input {
+      position: absolute;
+    }
+  }
+
+  #search_input {
+    position: absolute;
+  }
+
+  .icons {
+    justify-content: center;
+    // width: 42rem;
+    margin-right: 0.2rem;
+  }
+
+  // removing hover from icons
+  .nav_icons {
+    &:hover {
+      transform: translateY(0.8rem);
+    }
+
+    &:hover .menu_name {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  // {/* Meprof modal */}
+  .mypic {
+    right: 0.5rem;
+  }
+  .notification_modal {
+    height: 58rem;
+  }
+  .proficon_upper {
+    
+    margin-left: 1.5rem;
+    width:auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    display: none;
+  }
+
+  .mobile_navbar {
+    display: block;
+    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    .uppar_nav {
+      height: 6rem;
+      width: 100vw;
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $white;
+      border-bottom: 2px solid $background;
+    }
+  }
+  .content {
+    width: 95vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo_search {
+    width: 55%;
+    & .logo_image {
+      & svg {
+        width: 3.7rem;
+        margin: 0rem 1rem 0rem 0.5rem;
+      }
+    }
+  }
+  .searchBack {
+    width: 5rem;
+    height: 5rem;
+
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .search {
+    & input {
+      width: 100%;
+    }
+  }
+  #search_input {
+    border: 1px solid $gray-content;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: calc(100vw - 6rem);
+  }
+
+  .search_modal {
+    position: fixed;
+    top: 6rem;
+    left: 0rem;
+    width: 100vw;
+    border-radius: 0rem;
+    height: calc(100vh - 6rem);
+    z-index: 9999;
+    box-shadow: none;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+  }
+  .nav_icons {
+    transform: none;
+    display: grid;
+    place-content: center;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  .net_notification_dot,
+  .message_dot {
+    top: 0.5rem;
+  }
+  .net_notification_dot1 {
+    top: 0.8rem;
+  }
+  .lower_nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    width: 100vw;
+    background: $white;
+    list-style-type: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 100;
+  }
+
+  .lower_content {
+    width: 95vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .lower_nav_icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  // css for add option for mobile
+  // mobile options
+  .boxes {
+    position: fixed;
+    width: 100vw;
+    bottom: 6rem;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0px -2px 12px -6px rgba(0, 0, 0, 0.57);
+
+    & .boxs_center {
+      width: 100vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & .boxesIconsCover {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50vw;
+      }
+    }
+  }
+  .notification_modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    border-radius: 0rem;
+  }
+  .closeButton {
+    display: flex;
+  }
+
+  .UnfinishedDot {
+    right: 1rem;
+  }
+}
+
+@media (max-width: 591px) {
+  .content {
+    // width: 100vw;
+  }
+
+  .nav_icons {
+    & .home_svg {
+      width: 3rem;
+      height: 3rem;
+      fill: none;
+      stroke: $subtitle;
+      stroke-width: 0.18rem;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  .lower_content {
+    // width: 100vw;
+  }
+
+  .boxes {
+    & .boxs_center {
+      width: 100vw;
+    }
+  }
+
+  .mypic {
+    width: 24rem;
+  }
+
+  .icons_name {
+    padding: 1rem 2rem;
+
+    & .icons {
+      width: 3rem;
+      height: 3rem;
+      margin-right: 1rem;
+    }
+
+    & .name {
+      font-size: 1.6rem;
+    }
+  }
+  
+}
+
+@media (max-width: 396px) {
+  .nav_icons,
+  .proficon_upper {
+    width: 5rem;
+    height: auto;
+  }
+
+  .net_notification_dot {
+    width: 1.3rem;
+    height: 1.3rem;
+    top: -0.1rem;
+    right: 1.2rem;
+  }
+  .message_dot {
+    width: 1.6rem;
+    height: 1.6rem;
+    top: -0.1rem;
+    right: 0.8rem;
+  }
+  .net_notification_dot1 {
+    width: 1.3rem;
+    height: 1.3rem;
+    top: -0.1rem;
+    right: 0.8rem;
+  }
+  .UnfinishedDot {
+    right: 0rem;
+  }
+}
+@media (max-width: 328px) {
+  .nav_icons,
+  .proficon_upper {
+    width: 4rem;
+    height: auto;
+  }
+
+  .search {
+    & input {
+      padding: 0.8rem 0rem 0.8rem 3.4rem;
+    }
+  }
+
+  #search_input {
+    width: calc(100vw - 5rem);
+  }
+  .net_notification_dot {
+    right: 1rem;
+  }
+
+  .net_notification_dot1,
+  .message_dot {
+    right: 0.5rem;
+  }
+}
+
+@media (max-width: 280px) {
+  .nav_icons,
+  .proficon_upper {
+    width: auto;
+    height: auto;
+  }
+  .search {
+    & input {
+      padding: 0.5rem 0rem 0.5rem 3.4rem;
+    }
+  }
+  .logo_search {
+    & .logo_image {
+      & svg {
+        width: 3.2rem;
+      }
+    }
+  }
+
+  .net_notification_dot1,
+  .message_dot,
+  .net_notification_dot {
+    right: 0rem;
+  }
+}

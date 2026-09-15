@@ -1,0 +1,447 @@
+@import "./sass/_variable.scss";
+
+.NavbarCover {
+  z-index: 999;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.mobArrow {
+  width: 100%;
+  height: 5rem;
+  background-color: $white;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: none;
+  align-items: center;
+  
+}
+.mobArrowIcon {
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+
+.main {
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+.center {
+  margin-top: 1.8rem;
+  display: grid;
+  width: 115rem;
+  grid-template-columns: 31.5rem 57.9rem 22rem;
+  grid-template-rows: auto auto;
+  gap: 1.8rem;
+}
+
+.leftSide {
+  grid-column: 1/2;
+  grid-row: 1/4;
+  background-color: $white;
+  padding: 1rem 0rem;
+  border-radius: 1rem;
+  height: calc(100vh - 9rem);
+  position: sticky;
+  top: 7rem;
+}
+
+.upperPart {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $background;
+  padding: 0rem 1rem 1rem 1rem;
+}
+.ImageCover {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 6rem;
+  position: relative;
+  overflow: hidden;
+  background: $background;
+  background: $white;
+  outline: 2px solid $brandclr-highlight;
+}
+.groupName {
+  width: 75%;
+  font-size: 2rem;
+  font-weight: 500;
+  color: $black;
+}
+
+.adminDetails {
+  width: 100%;
+  height: 28rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0rem 2rem;
+  border-bottom: 1px solid $background;
+}
+.admin {
+  width: 100%;
+  font-size: 1.6rem;
+  color: $brand-clr;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.AdminImageCover {
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 12.5rem;
+  position: relative;
+  overflow: hidden;
+  background: $white;
+  outline: 2px solid $brandclr-highlight;
+}
+.adminName {
+  font-size: 1.8rem;
+  font-size: 500;
+  color: $subtitle;
+  text-align: center;
+
+  & span {
+    display: block;
+    font-size: 1.6rem;
+    color: $gray-content;
+    margin-top: 0.5rem;
+  }
+}
+
+// center part of background
+.centerUpperImage {
+  grid-column: 2/4;
+  grid-row: 1/2;
+  border-radius: 1rem;
+  background: $white;
+  position: relative;
+}
+.centerImageCover {
+  width: 100%;
+  height: 21rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: $black;
+}
+.adminEdit {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 3.5rem;
+  background: $background;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.adminEditIcons {
+  width: 2rem;
+  height: 2rem;
+  color: $black;
+}
+.CenterBelowPart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.CenterImageMobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.CenterImageMobileCover {
+  display: flex;
+  justify-content: space-start;
+  align-items: center;
+  width: 100%;
+}
+.ImageCoverMobile {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 6rem;
+  position: relative;
+  overflow: hidden;
+  display: none;
+  background: $background;
+}
+.CenterName {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: black;
+  width: 80%;
+}
+
+.seeMoreFriendsMobile {
+  font-size: 1.6em;
+  font-weight: 500;
+  color: $brand-clr;
+  text-align: left;
+  padding: 1rem 0rem 0rem 0.8rem;
+  cursor: pointer;
+  display: none;
+}
+
+.seeMoreDot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.joinButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  & input {
+    display: grid;
+    place-items: center;
+    width: 10rem;
+    height: 4rem;
+    background-color: $brand-clr;
+    border-radius: 0.5rem;
+    color: $white;
+    cursor: pointer;
+    font-size: 1.8rem;
+
+    &:hover {
+      background-color: #063a6e;
+      box-shadow:
+        rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+.dotModel {
+  position: relative;
+}
+.dotImageMore,
+.dotImageMore1 {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+.dotImageMore1 {
+  display: none;
+}
+.mobileCreatePost {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5rem;
+  background-color: $brand-clr;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.pencil {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: $white;
+}
+.uploadeImage {
+  margin-bottom: 1.8rem;
+}
+
+.groupPostCard {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.rightSide {
+  grid-column: 3/4;
+  grid-row: 2/4;
+  background: $white;
+  height: calc(100vh - 14rem);
+  position: sticky;
+  top: 7rem;
+  border-radius: 1rem;
+}
+
+.rightCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid $background;
+  padding: 1.5rem 1rem;
+}
+
+.friends {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: $gray-content;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.friendsImage {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .8rem;
+}
+
+.friendsImageCover {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+  position: relative;
+  overflow: hidden;
+  background: $white;
+  outline: 2px solid $brandclr-highlight;
+  display: grid;
+  place-items: center;
+}
+.friendsImageMore {
+  width: 2rem;
+  height: 2rem;
+}
+
+.seeMoreFriends {
+  font-size: 1.46em;
+  font-weight: 500;
+  color: $brand-clr;
+  padding: 1rem;
+  border-bottom: 1px solid $background;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+
+//responsiveness
+@media (max-width: 970px) {
+  .center {
+    margin-top: 1rem;
+    width: 98vw;
+    grid-template-columns: 31vw 65vw;
+    gap: 1.2rem;
+  }
+  .centerUpperImage {
+    grid-column: 2/3;
+  }
+  .rightSide {
+    display: none;
+  }
+  .seeMoreFriendsMobile {
+    display: block;
+  }
+  .CenterName {
+    width: 85%;
+  }
+  .upperPart {
+    padding: 0rem 0.5rem 0.5rem 0.5rem;
+  }
+  .uploadeImage {
+    margin-bottom: 1rem;
+  }
+  .groupName {
+    width: 70%;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .center {
+    margin-top: .5rem;
+    width: 98vw;
+    grid-template-columns: 31vw 65vw;
+    gap: 1.2rem;
+  }
+  .NavbarCover {
+    display: none;
+  }
+  .mobArrow{
+    display: flex;
+  }
+  .center {
+    width: 80vw;
+    grid-template-columns: 80vw;
+    gap: 0rem;
+
+  }
+  .leftSide {
+    display: none;
+  }
+  .seeMoreButton{
+    margin-top: 2rem ;
+    border-top: 2px solid $background;
+    padding-top: 1rem;
+  }
+  .centerUpperImage {
+    grid-column: 1/2;
+  }
+  .CenterBelowPart {
+    border-top: 1px solid $background;
+    flex-direction: column;
+    align-items: normal;
+  }
+  .mobileCreatePost {
+    display: flex;
+  }
+  .ImageCoverMobile {
+    display: block;
+  }
+  .seeMoreFriendsMobile {
+    text-align: center;
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  .CenterName {
+    width: 80%;
+    margin-left: 1rem;
+  }
+
+  .groupPostCard {
+    grid-column: 1/2;
+  }
+  .dotImageMore1 {
+    display: block;
+  }
+  .dotImageMore {
+    display: none;
+  }
+  .joinButton {
+    margin: 1rem 0rem 0rem 0rem;
+  }
+  
+  .centerImageCover {
+    height: 15rem;
+  }
+  .uploadeImage {
+    margin-bottom: .5rem;
+  }
+}
+@media (max-width: 591px) {
+  .center {
+    width: 98vw;
+    grid-template-columns: 98vw;
+    padding-bottom: 3rem;
+
+  }
+  .CenterBelowPart {
+    padding: 2rem 1rem;
+  }
+
+  .CenterName {
+    width: 70%;
+    font-size: 1.8rem;
+  }
+}

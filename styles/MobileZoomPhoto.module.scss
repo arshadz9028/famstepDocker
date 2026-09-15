@@ -1,0 +1,384 @@
+@import "./sass/_variable.scss";
+
+// Post card style
+
+.post_card {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  overflow-y: scroll;
+  background-color: $white;
+  transition: all 0.5s;
+  &:hover {
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+  }
+
+  & .image_time {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 0.1rem;
+
+    & .senderPost_img_circle {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    & .name_time {
+      line-height: 2rem;
+      margin-left: 1rem;
+
+      & .post_name {
+        column-rule-color: $black;
+        font-weight: 500;
+        font-size: 1.5rem;
+      }
+
+      & .time {
+        color: $gray-content;
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+.postCardCover {
+  width: 95vw;
+  margin-bottom: 7rem;
+}
+
+.right_expand {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem 0.5rem 0 0.5rem;
+}
+.langugeButtonCover {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.langugeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: $brand-clr;
+  color: $white;
+  border-radius: 1rem;
+  letter-spacing: 0.1rem;
+  & svg {
+    margin-right: 0.5rem;
+  }
+}
+.post_caption {
+  padding: 0rem 2rem;
+
+  & > p,
+  & > pre {
+    font-size: 1.7rem;
+    color: $black;
+    word-break: break-all;
+    max-width: 100%;
+    font-weight: 400;
+    padding: 0rem 0rem 1rem 0rem;
+    // white-space: pre-line;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}
+
+.cover_post_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: $codeBackground;
+}
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+.OutputWrite {
+  width: 100%;
+  max-height: 54rem;
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  & p {
+    color: $white;
+    font-size: 1.6rem;
+    padding-bottom: 0.5rem;
+    font-weight: 500;
+    text-align: left;
+    margin: 1.5rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid $white;
+  }
+}
+.codeFrame {
+  max-height: 54rem;
+  min-height: 10rem;
+  overflow: auto;
+  border-radius: 1rem;
+  background-color: $codeBackground;
+  white-space: pre-wrap;
+  line-height: 1.4;
+  font-family: monospace;
+  display: block;
+  width: 100%;
+  margin: 0;
+  background: $codeBackground;
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray_highlight; // Adjust this color as needed
+    border-radius: 0rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-content; // Adjust this color as needed
+    border-radius: 0rem 1rem 1rem 0rem;
+    border: 2px solid $white; // Adjust this color as needed
+  }
+}
+
+.code_section {
+  width: 100%;
+  height: 100%;
+}
+
+.post_image {
+  // max-height: 54rem;
+  // max-width: 57.9rem;
+  // width: 57.9rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.count_likes_comment {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 410;
+  line-height: 18px;
+
+  & .likes {
+    margin: 1rem 2rem;
+  }
+
+  & .comments {
+    margin: 1rem 0rem;
+  }
+}
+
+.icons_likes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0.8rem 0rem 2rem 0rem;
+}
+.icons_likesCover {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+//divider
+.borderDivider {
+  width: 95vw;
+  height: 0.2rem;
+  background-color: $brandclr-highlight;
+  z-index: 99999;
+  margin: auto;
+  margin-bottom: 2.5rem;
+}
+.no_comments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: $gray_content;
+  border-radius: 1.6rem;
+  border: 1px solid $textSoft;
+  width: 100%;
+  height: 25%;
+
+}
+//comment wala section in post
+.add_comment {
+  width: 100%;
+  background: $white;
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid $brandclr-highlight;
+  z-index: 999;
+}
+.add_commentCover {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.post_img_circle {
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 4.4rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.addcomment {
+  font-size: 1.6rem;
+  width: 70%;
+  background: $brandclr-highlight;
+  padding: 0rem 2.5rem;
+  border-radius: 100px;
+  height: 4.4rem;
+}
+
+.Post_comment {
+  background: rgba(10, 102, 194, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  font-size: 1.6rem;
+  color: $white;
+  font-weight: 500;
+  display: grid;
+  place-items: center;
+}
+.carousel_arrow_left,
+.carousel_arrow_right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  color: white;
+  border: none;
+  font-size: 2.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+.carousel_arrow_left {
+  left: 10px; /* Position left arrow */
+}
+
+.carousel_arrow_right {
+  right: 10px; /* Position right arrow */
+}
+
+.image_counter {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+// stranger
+.signupPrompt {
+  padding: 2rem 0rem;
+  font-size: 1.6rem;
+  color: $subtitle;
+  width: 100%;
+  background: $white;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid $brandclr-highlight;
+  z-index: 999;
+}
+
+.signupLink {
+  color: $brand-clr;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+@media (max-width: 970px) {
+}
+
+@media (max-width: 767px) {
+  .post_card {
+    display: flex;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+@media (max-width: 591px) {
+  .postCardCover {
+    width: 97vw;
+  }
+}
+@media (max-width: 424px) {
+  .icons_likesCover {
+    width: 95%;
+  }
+  .count_likes_comment {
+    & .likes {
+      margin: 1rem 1rem;
+    }
+  }
+  .post_img_circle {
+    width: 4rem;
+    height: 4rem;
+  }
+  .add_commentCover {
+    width: 98%;
+  }
+  .addcomment {
+    width: 62%;
+    height: 4.4rem;
+  }
+  .Post_comment {
+    padding: 0.8rem 1.8rem;
+  }
+}
+
+@media (max-width: 313px) {
+  .icons_likesCover {
+    width: 98%;
+  }
+}

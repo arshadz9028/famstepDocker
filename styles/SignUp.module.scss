@@ -1,0 +1,377 @@
+@import "./sass/_variable.scss";
+
+// {/* login page background */}
+.main_page {
+  background: $background;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+
+  //   {/* login form center */}
+  & .main_signUp {
+    display: grid;
+    place-items: center;
+
+    // {/* logo */}
+    & .Image_logo {
+      width: 20rem;
+      margin: 1rem 0rem;
+
+      & .logo_svg {
+        fill: $brand-clr;
+        stroke: none;
+        stroke-width: none;
+      }
+    }
+
+    // {/* main form section */}
+    & .signup_form {
+      width: 38rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // background-color: $white;
+      border-radius: 1.6rem;
+      height: auto;
+      margin: 1rem 0rem 3rem;
+      padding: 3rem 0rem;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 29px 0px;
+
+      // {/* form content */}
+      & > div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & .login_title {
+          text-align: center;
+          color: $black;
+          margin-bottom: 1rem;
+
+          & .join_famstep {
+            display: block;
+            font-size: 2.5rem;
+            line-height: 3.4rem;
+          }
+
+          & .or {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// password show and hide
+.passInput_icon {
+  position: relative;
+}
+
+.passwordIcons_cover {
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+}
+
+.password_Icons {
+  width: 1.9rem;
+  height: 1.9rem;
+  fill: none;
+  stroke: $brand_clr;
+  stroke-width: 0.18rem;
+  cursor: pointer;
+}
+
+//brand clr
+.my_link {
+  color: $brand_clr;
+}
+
+// control size of forms inner content
+.signup_form form {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: auto;
+  width: 80%;
+
+  & input {
+    margin-top: 1.5rem;
+    height: 5rem;
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1.5rem 1.5rem 0rem;
+    border-radius: .5rem;
+    border: 1px solid $textSoft;
+    background: $background1;
+    color: $black;
+    // font-family: 'Source Sans Pro', sans-serif ;
+  }
+
+  // button
+  & button {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 1.2rem 0rem;
+    background: $brand_clr;
+    border-radius: 20rem;
+    border: none;
+    color: $white;
+    font-weight: 500;
+    font-size: 1.7rem;
+    text-shadow: 1px 1px 1px #000;
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover {
+      background: #063a6e;
+    }
+  }
+}
+
+//error line
+.errorLine {
+  color: red;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  padding-left: 1rem;
+text-align:left; 
+}
+
+// label animation
+.input_bx {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  top: 3rem;
+  left: 1.5rem;
+  // padding: 10px;
+  font-size: 1.5rem;
+  color: $gray_content;
+  // text-transform:lowercase;
+  pointer-events: none;
+  transition: 0.1s;
+}
+
+.input_bx input:valid ~ .label,
+.input_bx input:focus ~ .label {
+  color: $brand-clr;
+  transform: translateX(0px) translateY(-7px);
+  font-size: 1.3rem;
+  font-weight: 500;
+  background: $background1;
+  // border-top: 1px solid $brand-clr;
+  letter-spacing: 0.1rem;
+}
+
+//policy and agreement
+.agree {
+  display: block;
+}
+
+.minusAgree {
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 1rem 0rem;
+  color: $gray_content;
+}
+
+// {/* extra login */}
+
+.connectwith {
+  position: relative;
+  color: $gray_content;
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 2rem 0rem;
+}
+
+.connectwithCover {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.connectLine {
+  width: calc(100% - 75%);
+  height: 0.1rem;
+  background-color: $textSoft;
+}
+
+.social_icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.google,
+.github {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  padding: 0.5rem 0rem;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+.google {
+  border: 2px solid $black;
+  color: $black;
+  font-weight: 500;
+}
+
+.github {
+  background-color: $black;
+  color: $white;
+}
+
+.githubFB {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.FB {
+  width: 3rem;
+  height: 3rem;
+}
+
+// media query for 4k screen
+@media (min-width: 1472px) {
+  .main_page {
+    .main_signUp {
+      height: 95vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+// media query for mobile screen
+
+@media (max-width: 767px) {
+  .main_page {
+    background-color: $white;
+    .main_signUp {
+      padding-top: 2rem;
+      & .Image_logo {
+        margin: 1rem 0rem 0rem 0rem;
+      }
+
+      & .signup_form {
+        width: 100vw;
+        background: $white;
+        border-radius: 0rem;
+        margin: 0rem 0rem 0rem;
+        padding: 0.8rem 0rem 6rem;
+        box-shadow: none;
+
+        & > div {
+          & .login_title {
+            & .join_famstep {
+              font-size: 2.2rem;
+              font-weight: 500;
+            }
+
+            & .or {
+              font-size: 1.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .signup_form form {
+    width: 85%;
+
+    & input {
+      height: 5.5rem;
+      font-size: 2rem;
+    }
+    & button {
+      padding: 1.5rem 0rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  .label {
+    top: 3.3rem;
+    font-size: 1.8rem;
+  }
+
+  .minusAgree {
+    font-size: 1.4rem;
+    margin: 1.5rem 0rem;
+    line-height: 2.5rem;
+  }
+
+  .connectwith {
+    font-size: 2rem;
+  }
+
+
+  .password_Icons {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+}
+@media (max-width: 591px) {
+  .connectLine {
+    width: calc(100% - 75%);
+  }
+}
+
+@media (max-width: 384px) {
+  .main_page {
+
+    .main_signUp {
+      & .Image_logo {
+        width: 19rem;
+      }
+      & .signup_form {
+        // {/* form content */}
+        & > div {
+  
+          & .login_title {
+            & .join_famstep {
+              font-size: 2rem;
+              line-height: 3rem;
+            }
+          }
+        }
+      }
+    }
+
+  }
+  .connectLine {
+    width: calc(100% - 80%);
+  }
+  .githubFB {
+    margin-left: 0.5rem;
+  }
+  .label {
+    font-size: 1.5rem;
+  }
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #08529B;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

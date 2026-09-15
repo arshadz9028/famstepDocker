@@ -1,0 +1,32 @@
+.draggableButton {
+  border-radius: 50%;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  will-change: transform;
+  
+  &:active {
+    cursor: grabbing;
+    transform: scale(0.95);
+    background-color: darken(#ff4500, 10%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  }
+} 
+@media (max-width: 767px) {
+  .draggableButton{
+    display: flex;
+  }
+}

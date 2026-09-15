@@ -1,0 +1,208 @@
+@import "./sass/_variable.scss";
+
+//edit profile
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  background: rgb(62, 60, 60, 0.8);
+  z-index: 999;
+  overflow: hidden;
+}
+
+.fullEdit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 90vh;
+  width: 55rem;
+  background-color: $white;
+  border-radius: 1rem;
+  min-height: 33.2rem;
+  height: auto;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray_highlight;
+    border-radius: 0rem 1.5rem 1.5rem 0rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-content;
+    border-radius: 0rem 1.5rem 1.5rem 0rem;
+    border: 2px solid $white;
+  }
+}
+
+.upperPortion {
+  width: 100%;
+}
+
+// {/* third card lower part */}
+.skill_main {
+  background-color: $white;
+  grid-column: 5/ 6;
+  grid-row: 2 / 3;
+  min-height: 20rem;
+  & thead {
+    position: sticky;
+    top: 5.6rem;
+    background-color: $white;
+    z-index: 1;
+    height: 4.5rem;
+  }
+
+  & table {
+    border-collapse: collapse;
+    width: 100%;
+    & th {
+      font-weight: 400;
+      font-size: 1.7rem;
+      color: $gray-content;
+      text-align: center;
+    }
+
+    & td {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 410;
+      color: $black;
+      padding: 0rem 0rem 1.5rem 0rem;
+    }
+
+    & tbody {
+      width: 85%;
+    }
+  }
+}
+
+.deleteButton {
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: $brand-clr;
+  transition: all ease-in-out 0.5s;
+  &:hover {
+    color: $prime_highlight;
+  }
+}
+
+.AddMoreSkillsButton {
+  width: 100%;
+  display: grid;
+  place-content: center;
+  position: sticky;
+  bottom: 0.2rem;
+  border-top: 2.5px solid $background; 
+  background: $white;
+}
+.AddButton {
+  font-size: 1.6rem;
+  padding: 1rem 4rem;
+  background-color: $brand-clr;
+  color: $white;
+  border-radius: 3rem;
+  margin: 1.5rem 0rem;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+  &:hover {
+    background-color: #053b6b;
+  }
+}
+// Announcement
+
+.inputDesc {
+  width: 90%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+}
+
+.textArea {
+  margin-top: 2.2rem;
+  height: 15rem;
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 2.5rem 4.4rem 0rem 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid $border;
+  background: $background;
+  color: $black;
+  resize: none;
+}
+
+.labelInputDesc {
+  position: absolute;
+  top: 3.5rem;
+  // text-align: center;
+  left: 1.5rem;
+  // padding: 10px;
+  font-size: 1.5rem;
+  color: $gray_content;
+  // text-transform:lowercase;
+  pointer-events: none;
+  transition: 0.1s;
+}
+
+.inputDesc textarea:valid ~ .labelInputDesc,
+.inputDesc textarea:focus ~ .labelInputDesc {
+  color: $brand-clr;
+  transform: translateX(0px) translateY(-7px);
+  font-size: 1.3rem;
+  font-weight: 500;
+  background: $background;
+  // border-top: 1px solid $brand-clr;
+  letter-spacing: 0.1rem;
+}
+
+@media (min-height: 800px) {
+  .fullEdit {
+    // justify-content: center;
+    height: 78rem;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 767px) {
+  .AddMoreSkillsButton {
+    position: fixed;
+  }
+  .skill_main{
+    padding-bottom: 10rem;
+
+  }
+  .fullEdit {
+    justify-content: flex-start;
+    max-height: 100vh;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0rem;
+      &::-webkit-scrollbar {
+        width: .5rem;
+      }
+    
+      &::-webkit-scrollbar-track {
+        border-radius: 0rem ;
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        border-radius: 0rem ;
+        border: 1px solid $white;
+      }
+    
+    
+  }
+  .textArea {
+    height: 50vh;
+  }
+}
