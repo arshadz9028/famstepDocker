@@ -1,6 +1,97 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Famstep
+
+Famstep is a social productivity and professional networking platform for developers, freelancers, learners, and teams. It brings skill development, collaboration, competitions, project work, and professional networking into one application.
+
+## Features
+
+- User profiles, achievements, skills, education, experience, and projects
+- Posts, comments, reactions, notifications, follows, and networking
+- Learning groups, collaboration workflows, messaging, and real-time chat
+- Coding practice, contests, scoreboards, and competition management
+- Freelancing and project-oriented workflows
+- Authentication with NextAuth and Google/GitHub providers
+- MongoDB-backed data storage
+- AWS S3 media storage and AWS email integrations
+- Docker-based production deployment
+
+## Tech Stack
+
+- Next.js 15 with the Pages Router
+- React 18 and JavaScript/JSX
+- MongoDB and Mongoose
+- NextAuth
+- Socket.IO
+- AWS S3, SES, and Cognito integrations
+- Sass, Material UI, Ant Design, and Recharts
+
+## Requirements
+
+- Node.js 18 or newer
+- npm
+- MongoDB
+- AWS services and OAuth credentials for the integrations you enable
+
+## Local Development
+
+1. Install dependencies:
+
+	```bash
+	npm install
+	```
+
+2. Create `.env.local` in the project root and add the required application credentials. Use a secret manager or local environment file; never commit credentials to the repository.
+
+3. Start the development server:
+
+	```bash
+	npm run dev
+	```
+
+4. Open [http://localhost:3000](http://localhost:3000).
+
+## Production
+
+Build and run the application with:
+
+```bash
+npm run build
+npm start
+```
+
+The included Docker configuration can be used for containerized deployment:
+
+```bash
+docker compose up --build
+```
+
+The application is then available on port `3000`.
+
+## Project Structure
+
+| Directory | Purpose |
+| --- | --- |
+| `pages/` | Pages and API routes |
+| `components/` | Reusable UI components |
+| `layouts/` | Page layouts and feature views |
+| `model/` | MongoDB models |
+| `config/` | Authentication, storage, email, and upload configuration |
+| `database/` | Database connection helpers |
+| `global/` | Shared React context and socket layout |
+| `styles/` | Global and component styles |
+
+## Available Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Create a production build |
+| `npm start` | Start the production server |
+| `npm run lint` | Run Next.js linting |
+
+## Security
+
+Environment files contain database, OAuth, email, and cloud provider credentials. Keep them out of version control, rotate any credentials that have been exposed, and provide deployment values through the hosting platform or a secret manager.
 
 First, run the development server:
 
